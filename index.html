@@ -419,6 +419,80 @@
       async=""
       src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/"
     ></script>
+    <style>
+/* Fix for the hero section images on mobile */
+@media (max-width: 767px) {
+  /* Make the logo image responsive */
+  .navbar-brand img {
+    width: auto;
+    height: auto;
+    max-width: 150px;
+  }
+  
+  /* Fix for the hero section layout */
+  .hero-banner-dv.on-demand-dv {
+    padding: 20px 0;
+  }
+  
+  /* Make the images responsive */
+  .ondem_right img,
+  .ondem_left img {
+    max-height: 250px;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  /* Adjust row margin to prevent overflow */
+  .row[style="margin-bottom: -50px;"] {
+    margin-bottom: 0 !important;
+  }
+  
+  /* Ensure columns stack properly */
+  .col-xl-3, .col-lg-3 {
+    margin-bottom: 20px;
+  }
+  
+  /* Hide stock icons on mobile for cleaner layout */
+  .stock-icon-wrp {
+    display: none;
+  }
+  
+  /* Improve banner text readability */
+  .banner-caption h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+  
+  /* Center align content on mobile */
+  .text-center {
+    text-align: center !important;
+  }
+  
+  /* Adjust button sizing */
+  .sign-btn .hero-signup {
+    padding: 10px 20px !important;
+    font-size: 16px;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+
+/* Additional fixes for very small screens */
+@media (max-width: 480px) {
+  .ondem_right img,
+  .ondem_left img {
+    max-height: 180px;
+  }
+  
+  .banner-caption h1 {
+    font-size: 24px;
+  }
+}
+</style>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -443,11 +517,11 @@
         >
           <div class="container">
             <a class="navbar-brand" href="index.html"
-              ><img src="assets/images/havenark-preview.png" alt="image logo"
+              ><img src="assets/images/256.png" alt="image logo" style="height: auto; width: 30%;"
             /></a>
             <div class="resp_menu d-flex align-items-center">
               <a
-                href="https://wa.me/918949800532"
+                href="https://wa.me/"
                 class="online-icon d-lg-none d-block p-0 me-lg-2 me-1"
                 ><img src="./assets/images/whatsapp.png" alt="whatsapp image"
               /></a>
@@ -479,18 +553,18 @@
               </ul>
               <form class="d-flex add-to-cart">
                 <a
-                  href="https://wa.me/918949800532"
+                  href="https://wa.me/"
                   class="online-icon d-lg-block d-none"
                   target="_blank"
                   ><img src="./assets/images/whatsapp.png" alt="whatsapp image"
                 /></a>
-                <a
+                <!-- <a
                   href="https://parang.exlyapp.com/caafc04a-f26c-484d-8ba8-ef200e52f2cc?init_booking=true&amp;enable_discount=true&amp;&amp;&amp;&amp;&amp;"
                   class="discover-btn geturl d-lg-block d-none"
                   id="cta-0"
                   target="_blank"
                   >Sign Up</a
-                >
+                > -->
               </form>
             </div>
           </div>
@@ -602,9 +676,14 @@
               />
             </div>
           </div>
-          <div class="row align-items-center">
+          <div class="row align-items-center"> 
+            <div class="col-xl-3 col-lg-3 mb-lg-0 mb-4" >
+              <div class="ondem_left">
+                  <img src="./assets/images/DSC01180-removebg.png" alt="banner-left">
+              </div>
+            </div>
             <div class="col-xl-6 col-lg-6 mb-lg-0 mb-4">
-              <div class="banner-caption text-lg-start text-center">
+              <div class="banner-caption text-center">
                 <div class="">
                   <!--banner_crd_brder class remove form here-->
                   <h1 id="mainHeading" class="d-md-block d-none">
@@ -636,7 +715,7 @@
                     <p class="mb-0 text-light datetime4"></p>
                     <div class="sign-btn mt-0 ms-lg-5">
                       <a
-                        href="https://parang.exlyapp.com/caafc04a-f26c-484d-8ba8-ef200e52f2cc?init_booking=true&amp;enable_discount=true&amp;&amp;&amp;&amp;&amp;"
+                        href=""
                         class="hero-signup btn-animation geturl aos-init add-to-cart"
                         id="cta-2"
                         target="_blank"
@@ -647,7 +726,7 @@
                 </div>
                 <div class="sign-btn">
                   <a
-                    href="https://parang.exlyapp.com/caafc04a-f26c-484d-8ba8-ef200e52f2cc?init_booking=true&amp;enable_discount=true&amp;&amp;&amp;&amp;&amp;"
+                    href=""
                     id="cta-2"
                     class="hero-signup btn-animation geturl mb-4"
                     target="_blank"
@@ -662,10 +741,10 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-6 col-lg-6" style="margin-bottom: 200px;">
-              <div class="ondem_right text-center">
-                <img src="./assets/images/rit.png" alt="banner-top" />
-                <div
+            <div class="col-xl-3 col-lg-3 mb-lg-0 mb-4" >
+              <div class="ondem_right">
+                <img src="./assets/images/rit.png" alt="banner-right" />
+                <!-- <div
                   class="seb_card sebi_card_img d-flex m-auto my-0 align-items-center"
                 >
                   <div class="sebi-img">
@@ -678,7 +757,7 @@
                     <span>SEBI Registered Research Analyst</span>
                     <h3></h3>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -690,44 +769,44 @@
         <div class="stock-topic d-lg-block d-none">
           <div
             class="tradingview-widget-container"
-            style="width: 100%; height: 72px"
+            style="width: 100%; height: 72px;"
           >
             <style>
               .tradingview-widget-copyright {
                 font-size: 13px !important;
                 line-height: 32px !important;
                 text-align: center !important;
-                vertical-align: middle !important;
-                /* @mixin sf-pro-display-font; */
-                font-family: -apple-system, BlinkMacSystemFont, "Trebuchet MS",
-                  Roboto, Ubuntu, sans-serif !important;
-                color: #b2b5be !important;
-              }
+              vertical-align: middle !important;
+              /* @mixin sf-pro-display-font; */
+              font-family: -apple-system, BlinkMacSystemFont, "Trebuchet MS",
+                Roboto, Ubuntu, sans-serif !important;
+              color: #b2b5be !important;
+            }
 
-              .tradingview-widget-copyright .blue-text {
-                color: #2962ff !important;
-              }
+            .tradingview-widget-copyright .blue-text {
+              color: #2962ff !important;
+            }
 
-              .tradingview-widget-copyright a {
-                text-decoration: none !important;
-                color: #b2b5be !important;
-              }
+            .tradingview-widget-copyright a {
+              text-decoration: none !important;
+              color: #b2b5be !important;
+            }
 
-              .tradingview-widget-copyright a:visited {
-                color: #b2b5be !important;
-              }
+            .tradingview-widget-copyright a:visited {
+              color: #b2b5be !important;
+            }
 
-              .tradingview-widget-copyright a:hover .blue-text {
-                color: #1e53e5 !important;
-              }
+            .tradingview-widget-copyright a:hover .blue-text {
+              color: #1e53e5 !important;
+            }
 
-              .tradingview-widget-copyright a:active .blue-text {
-                color: #1848cc !important;
-              }
+            .tradingview-widget-copyright a:active .blue-text {
+              color: #1848cc !important;
+            }
 
-              .tradingview-widget-copyright a:visited .blue-text {
-                color: #2962ff !important;
-              }
+            .tradingview-widget-copyright a:visited .blue-text {
+              color: #2962ff !important;
+            }
               </style><iframe
               scrolling="no"
               allowtransparency="true"
@@ -891,13 +970,14 @@
                 </video>
               </div>
 
-              <div class="bttm-logo d-md-flex">
+              <div class="bttm-logo d-md-flex" style="margin-top: 10px;">
                 <div
-                  class="d-md-block d-flex align-items-center justify-content-center" style="width: 220px; height: auto;"
+                  class="d-md-block d-flex align-items-center justify-content-center" style="width:93px; margin-top: 30px; margin-right: 33px; "
                 >
                   <img
-                    src="./assets/images/havenark-preview.png"
+                    src="./assets/images/256.png"
                     alt="udner_div_logo"
+                    style="height: auto; width: 120px;"
                   />
                   <div class="d-md-none d-inline-block host-brder">
                     <div class="hoster-by">
@@ -914,27 +994,27 @@
                       COMMUNITY</span
                     >
                   </h2>
-                  <a href="#" class="d-md-inline-block d-none">
+                  <!-- <a href="#" class="d-md-inline-block d-none">
                     SEBI REGISTERED RESEARCH ANALYST
                     <span class="dot-6"></span> 
-                  </a>
+                  </a> -->
                 </div>
                 <div
                   class="bttm-lgo_inner text-md-start text-center d-md-none d-block"
                 >
                   <h2 class="text-white">
                     <span class="d-md-block d-none">HOSTED BY HAVENARK - </span
-                    >India’s
+                    >India's
                     <span class="green-txt-resp"> #1</span> Professional <br />
                     Trading Community
                   </h2>
-                  <a href="#" class="d-md-inline-block d-none">
+                  <!-- <a href="#" class="d-md-inline-block d-none">
                     SEBI REGISTERED RESEARCH ANALYST
                     <span class="dot-6"></span> 
-                  </a>
+                  </a> -->
                 </div>
               </div>
-              <div
+              <!-- <div
                 class="d-md-none d-flex justify-content-center align-items-center position-relative sebi_card_img sebi-trad-resp"
               >
                 <div class="sebi-resp-logo">
@@ -945,12 +1025,12 @@
                 </div>
                 <div class="sebi-resp">
                   <p class="mb-lg-3 mb-0">
-                    <span class="text-uppercase">SEBI Registered</span>
+                    <span class="text-uppercase">SEBI Registered</span> 
                     <span class="text-capitalize">Research Analyst</span>
                   </p>
                   <span></span>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
           <!--  <div class="row justify-content-center d-md-none d-flex">
@@ -1085,213 +1165,137 @@
             </div>  
             <!-- Swiper -->
             <div class="position-relative">
-                <div class="learn_slide_wrap screenshot_slider">
-                    <div class="swipers-wrapper">
-                        <div class="items">
-                            <div class="card_learn">
-                                <div class="learn_img mb-4">
-                                    <img src="assets/images/Website-Gif/3_1.gif" alt="learn1" class="img-fluid w-100">
-                                </div>
-                                <div class="learn_btm_ctn">
-                                    <h2 class="text-white mb-3">How To Catch Big Moves Before They Happen ?</h2>
-                                    <p class="line-clamp mb-4">Professional traders are very well aware about retail trading methods like using chart patterns, trendlines, candlestick patterns, indicators etc and hence, they design market traps with their algorithms and once retail traders are trapped, the actual move happens in the market. BUT, you can learn institutional order flow and trade with the big players.</p>
-                                    <div class="text-center add-to-cart">
-                                        <a href="#" class="green_btn geturl" id="cta-3" target="_blank">Register Now! </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="items">
-                            <div class="card_learn">
-                                <div class="learn_img mb-4">
-                                    <img src="assets/images/Website-Gif/1.gif" alt="learn1" class="img-fluid w-100">
-                                </div>
-                                <div class="learn_btm_ctn">
-                                    <h2 class="text-white mb-3">Why Breakouts, Chart Patterns & Indicators Fail ?</h2>
-                                    <p class="line-clamp mb-4">Retail trading is so boring, it is ineffective and doesn't produce good trading results. It just makes you get trapped, only to take your stop loss. Learn how Institutions Trade, that's the future of trading.</p>
-                                    <div class="text-center add-to-cart">
-                                        <a href="#" class="green_btn geturl " id="cta-4" target="_blank">Register Now! </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="items">
-                            <div class="card_learn">
-                                <div class="learn_img mb-4">
-                                    <img src="assets/images/Website-Gif/2_1.gif" alt="learn1" class="img-fluid w-100">
-                                </div>
-                                <div class="learn_btm_ctn">
-                                    <h2 class="text-white mb-3">How To Identify Institutional Entries?</h2>
-                                    <p class="line-clamp mb-4">More than 80% of all orders executed in the financial markets are by algorithms which is how big players or the institutions place their orders. However in this process, they leave some footprints which we can use, to know where they will enter again.</p>
-                                    <div class="text-center add-to-cart">
-                                        <a href="#" class="green_btn geturl " id="cta-5" target="_blank">Register Now! </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="items">
-                            <div class="card_learn">
-                                <div class="learn_img mb-4">
-                                    <img src="assets/images/Website-Gif/1.gif" alt="learn1" class="img-fluid w-100">
-                                </div>
-                                <div class="learn_btm_ctn">
-                                    <h2 class="text-white mb-3">Why Breakouts, Chart Patterns & Indicators Fail ?</h2>
-                                    <p class="line-clamp mb-4">Retail trading is so boring, it is ineffective and doesn't produce good trading results. It just makes you get trapped, only to take your stop loss. Learn how Institutions Trade, that's the future of trading.</p>
-                                    <div class="text-center add-to-cart">
-                                        <a href="#" class="green_btn geturl" id="cta-6" target="_blank">Register Now! </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> 
-                    <!-- <div class="swiper-pagination"></div>
-                      
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div> -->
-                     
-                </div>
-                
-            </div>
+              <div class="learn_slide_wrap screenshot_slider">
+                  <div class="swipers-wrapper">
+                      <div class="items">
+                          <div class="card_learn" style="height: 300px; overflow: hidden;">
+                              <div class="learn_img mb-4" style="height: 100%; overflow: hidden;">
+                                  <img src="assets/images/Website-Gif/tile1.jpeg" alt="learn1" style="width: 100%; height: 100%; object-fit: contain;">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="items">
+                          <div class="card_learn" style="height: 300px; overflow: hidden;">
+                              <div class="learn_img mb-4" style="height: 100%; overflow: hidden;">
+                                  <img src="assets/images/Website-Gif/tile2.jpeg" alt="learn2" style="width: 100%; height: 100%; object-fit: contain;">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="items">
+                          <div class="card_learn" style="height: 300px; overflow: hidden;">
+                              <div class="learn_img mb-4" style="height: 100%; overflow: hidden;">
+                                  <img src="assets/images/Website-Gif/tile3.jpeg" alt="learn3" style="width: 100%; height: 100%; object-fit: contain;">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="items">
+                          <div class="card_learn" style="height: 300px; overflow: hidden;">
+                              <div class="learn_img mb-4" style="height: 100%; overflow: hidden; object-position: center;">
+                                  <img src="assets/images/Website-Gif/tile4.jpeg" alt="learn4" style="width: 100%; height: 100%; object-fit: contain;">
+                              </div>
+                          </div>
+                      </div>
+                  </div> 
+              </div>
+          </div>
+          
+          
         </div>
-    </section>
+      </section>
       <!--end-->
-
+      <div class="text-center mt-4 mb-4">
+        <a href="partners.html" class="d-inline-block green_btn btn-animation mb-2 geturl">Checkout Our Partners</a>
+      </div>
       <!--start-->
       <section class="check_out_monster">
-        <div class="container"> 
-            <div class="head_wrap position-relative mb-lg-5 mb-4 prple-shadow yello-shadow" data-aos="fade-up" data-aos-duration="1000"> 
+        <div class="container">
+            <div class="head_wrap position-relative mb-lg-5 mb-4 prple-shadow yello-shadow" data-aos="fade-up" data-aos-duration="1000">
                 <div class="heading_dv text-center">
-                    <h2 class="text-white">Check Out Our Monster<br> Trades Taken In <span>Live Markets</span>
-                    </h2>
-                </div> 
-            </div> 
-            <!--desktop only-->
+                    <h2 class="text-white">Check Out Our <span>Trading Community</span></h2>
+                </div>
+            </div>
+    
+            <!-- Desktop Only -->
             <div class="monster_wrap monster_desk d-md-block d-none">
                 <div class="monster_card">
                     <div class="monster_img img_before position-relative">
                         <div class="after_before position-absolute">
-                            <span class="before-btn">Before</span> 
+                            <span class="before-btn">Before</span>
                         </div>
-                        <img src="assets/images/after_before/before_1.png" alt="before"> 
-                    </div>
-                </div>
-                <div class="monster_card">
-                    <div class="monster_img img_before position-relative"> 
-                        <div class="after_before position-absolute">
-                            <span class="after-btn">After</span>
-                        </div>
-                        <img src="assets/images/after_before/after_01.png" alt="before" class="after_img">  
-                    </div> 
-                </div>
-                <div class="monster_card">
-                    <div class="monster_img img_before position-relative">
-                        <div class="after_before position-absolute">
-                            <span class="before-btn">Before</span> 
-                        </div>
-                        <img src="assets/images/after_before/before_02.png" alt="before"> 
+                        <img src="assets/images/after_before/before_1.png" alt="before">
                     </div>
                 </div>
                 <div class="monster_card">
                     <div class="monster_img img_before position-relative">
-                        <div class="after_before position-absolute"> 
+                        <div class="after_before position-absolute">
                             <span class="after-btn">After</span>
                         </div>
-                        <img src="assets/images/after_before/after_02.png" alt="before">
-                    </div> 
+                        <img src="assets/images/after_before/after_01.png" alt="after">
+                    </div>
                 </div>
                 <div class="monster_card">
                     <div class="monster_img img_before position-relative">
                         <div class="after_before position-absolute">
-                            <span class="before-btn">Before</span> 
+                            <span class="before-btn">Before</span>
+                        </div>
+                        <img src="assets/images/after_before/before_02.png" alt="before">
+                    </div>
+                </div>
+                <div class="monster_card">
+                    <div class="monster_img img_before position-relative">
+                        <div class="after_before position-absolute">
+                            <span class="after-btn">After</span>
+                        </div>
+                        <img src="assets/images/after_before/after_02.png" alt="after">
+                    </div>
+                </div>
+                <div class="monster_card">
+                    <div class="monster_img img_before position-relative">
+                        <div class="after_before position-absolute">
+                            <span class="before-btn">Before</span>
                         </div>
                         <img src="assets/images/after_before/before_03.png" alt="before">
                     </div>
                 </div>
                 <div class="monster_card">
                     <div class="monster_img img_before position-relative">
-                        <div class="after_before position-absolute"> 
+                        <div class="after_before position-absolute">
                             <span class="after-btn">After</span>
                         </div>
-                        <img src="assets/images/after_before/after_03.png" alt="before">
-                    </div> 
+                        <img src="assets/images/after_before/after_03.png" alt="after">
+                    </div>
                 </div>
             </div>
-
-            <!--responsive only-->
+    
+            <!-- Responsive Only -->
             <div class="monster_wrap monster_resp d-md-none d-block">
-                <div class="monster_card">
-                    <div class="monster_img img_before position-relative">
-                        <!-- <div class="after_before position-absolute">
-                            <span class="before-btn">Before</span>
-                            <span class="after-btn">After</span>
-                        </div> -->
-                        <div class="res_af_img">
-                            <img src="assets/images/after_before/before_1.png" alt="before" class="before_img">
-                            <img src="assets/images/after_before/after_01.png" alt="before" class="after_img">
-                        </div>
-                    </div>
-                </div>
-                <div class="monster_card">
-                    <div class="monster_img img_before position-relative">
-                        <!-- <div class="after_before position-absolute">
-                            <span class="before-btn">Before</span>
-                            <span class="after-btn">After</span>
-                        </div> -->
-                        <div class="res_af_img">
-                            <img src="assets/images/after_before/before_02.png" alt="before" class="before_img">
-                            <img src="assets/images/after_before/after_02.png" alt="before" class="after_img">
-                        </div>
-                    </div> 
-                </div>
-                <div class="monster_card">
-                    <div class="monster_img img_before position-relative">
-                        <!-- <div class="after_before position-absolute">
-                            <span class="before-btn">Before</span>
-                            <span class="after-btn">After</span>
-                        </div> -->
-                        <div class="res_af_img">
-                            <img src="assets/images/after_before/before_03.png" alt="before" class="before_img">
-                            <img src="assets/images/after_before/after_03.png" alt="before" class="after_img">
-                        </div>
-                    </div>
-                </div>
-                <div class="monster_card">
-                    <div class="monster_img img_before position-relative">
-                        <!-- <div class="after_before position-absolute">
-                            <span class="before-btn">Before</span>
-                            <span class="after-btn">After</span>
-                        </div> -->
-                        <div class="res_af_img">
-                            <img src="assets/images/after_before/before_1.png" alt="before" class="before_img">
-                            <img src="assets/images/after_before/after_01.png" alt="before" class="after_img">
-                        </div>
-                    </div> 
-                </div>
-                <div class="monster_card">
-                    <div class="monster_img img_before position-relative">
-                        <!-- <div class="after_before position-absolute">
-                            <span class="before-btn">Before</span>
-                            <span class="after-btn">After</span>
-                        </div> -->
-                        <div class="res_af_img">
-                            <img src="assets/images/after_before/before_02.png" alt="before" class="before_img">
-                            <img src="assets/images/after_before/after_02.png" alt="before" class="after_img">
-                        </div>
-                    </div>
-                </div>
-                <div class="monster_card">
-                    <div class="monster_img img_before position-relative">
-                        <!-- <div class="after_before position-absolute">
-                            <span class="before-btn">Before</span>
-                            <span class="after-btn">After</span>
-                        </div> -->
-                        <div class="res_af_img">
-                            <img src="assets/images/after_before/before_03.png" alt="before" class="before_img">
-                            <img src="assets/images/after_before/after_03.png" alt="before" class="after_img">
-                        </div>
-                    </div> 
-                </div>
-            </div>
+              <div class="monster_card">
+                  <div class="monster_img img_before position-relative">
+                      <div class="res_af_img">
+                          <img src="assets/images/after_before/before_1.png" alt="before" class="before_img">
+                          <img src="assets/images/after_before/after_01.png" alt="after" class="after_img">
+                      </div>
+                  </div>
+              </div>
+              <div class="monster_card">
+                  <div class="monster_img img_before position-relative">
+                      <div class="res_af_img">
+                          <img src="assets/images/after_before/before_02.png" alt="before" class="before_img">
+                          <img src="assets/images/after_before/after_02.png" alt="after" class="after_img">
+                      </div>
+                  </div>
+              </div>
+              <div class="monster_card">
+                  <div class="monster_img img_before position-relative">
+                      <div class="res_af_img">
+                          <img src="assets/images/after_before/before_03.png" alt="before" class="before_img">
+                          <img src="assets/images/after_before/after_03.png" alt="after" class="after_img">
+                      </div>
+                  </div>
+              </div>
+          </div>
+    
+            <!-- Call-To-Action Button -->
             <div class="text-center" data-aos="fade-up" data-aos-duration="1000">
                 <div class="check-btn-m">
                     <a href="#" class="d-inline-block green_btn mb-2 geturl" target="_blank">Join Now (English) At ₹199</a>
@@ -1299,9 +1303,9 @@
                 </div>
                 <span class="d-block">(9+ Years Of Trading Experience)</span>
             </div>
-
         </div>
-    </section> 
+    </section>
+    
       <!--end-->
 
       <!--start-->
@@ -1498,14 +1502,14 @@
                   >
                 </div>
               </div>
-              <div class="hindi-seat">
+              <!-- <div class="hindi-seat">
                 <span class="lightwhite">Date &amp; Time</span>
                 <h2 class="mb-md-3 mb-3 hindidatetime1 d-block">
                   Mar 11, 2025 8:00 PM
-                </h2>
+                </h2> -->
                 <!-- <p class="mb-4">We have helped 50,000+ Traders achieve mind blowing trading results by helping
                             them understand</p> -->
-                <div class="join-webinar">
+                <!-- <div class="join-webinar">
                   <a
                     href="https://parang.exlyapp.com/86991d04-ef41-4ff2-90d0-342d7a78b7e1?init_booking=true&amp;enable_discount=true&amp;&amp;&amp;"
                     class="btn-sky d-inline-block green_btn btn-animation mb-2 hindiurl"
@@ -1516,7 +1520,7 @@
                     >(Seats Are Filling Very Fast)</span
                   >
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -1615,7 +1619,7 @@
                             <div class="webinar-border">
                                 <span></span>
                             </div>
-                            <div class="webinar-hindi">
+                            <!-- <div class="webinar-hindi">
                             <div class="dates text-center mb-lg-4">
                                 <span class="lightwhite">Date & Time (Hindi)</span> 
                                 <h2 class="mb-4 hindidatetime2"></h2> 
@@ -1624,7 +1628,7 @@
                             <a href="#" class="hindiurl btn-sky" target="_blank">
                                  Buy Now
                             </a>
-                            </div>
+                            </div> -->
                         </div> 
                     </div>
                 </div>
@@ -1659,7 +1663,7 @@
               
                               <div class="webinar-buttons">
                                   <a href="#" class="geturl mb-3" target="_blank">Join Webinar (English) At ₹199</a>
-                                  <a href="#" class="hindiurl btn-sky" target="_blank">Join Webinar (Hindi) At ₹199</a>
+                                  <!-- <a href="#" class="hindiurl btn-sky" target="_blank">Join Webinar (Hindi) At ₹199</a> -->
                               </div>
                           </div>
                       </div>
@@ -1859,16 +1863,16 @@
                     My Mission is to Educate, Train, Fund &amp; Help Traders.
                   </p>
                 </div>
-                <div class="seb_card sebi_card_img d-flex align-items-center">
+                <!-- <div class="seb_card sebi_card_img d-flex align-items-center">
                   <div class="sebi-img">
                     <img
-                      src="./assets/images/ic_sharp-verified-green.svg"
+                      src="./assets/images/icon/ic_sharp-verified-green.svg"
                       alt="ic_sharp-verified"
                     />
                   </div>
                   <div class="sebi-ctn">
                     <span>SEBI Registered Research Analyst</span>
-                    <h3></h3>
+                    <h3></h3> -->
                   </div>
                 </div>
               </div>
@@ -1899,7 +1903,7 @@
                 <img src="assets/images/feedback/user1.png" alt="user1">
                 <div class="testi-ctn ms-xl-4">
                     <h3>Madhav, Lawyer</h3>
-                    <span>“Truly Game Changing. I Will Never Use Retail Trading Concepts, Ever.”</span>
+                    <span>"Truly Game Changing. I Will Never Use Retail Trading Concepts, Ever."</span>
                     <p>I got such a big reality check. Parang explained us how the markets really work as opposed to the half baked knowledge I had after watching YouTube Videos. Such an eye opener, I am now able to trade like the professionals. Thank You So Much Team Havenark!</p>
                 </div>
             </div>
@@ -1907,7 +1911,7 @@
                 <img src="assets/images/feedback/user2.png" alt="user1">
                 <div class="testi-ctn ms-xl-4">
                     <h3>Abhishek, IIT Kanpur</h3>
-                    <span>“Mind Blowing! This Was The Best Trading Webinar I Have Ever Attended.”</span>
+                    <span>"Mind Blowing! This Was The Best Trading Webinar I Have Ever Attended."</span>
                     <p>Well I was blown with the way you explained things. What a perspective about trading and investing. The way you explain things shows the kind of time and energy you have spent in trading. I really was vibing with you man. Absolutely loved the Webinar. Kudos!</p>
                 </div>
             </div>
@@ -1915,7 +1919,7 @@
                 <img src="assets/images/feedback/user3.png" alt="user1">
                 <div class="testi-ctn ms-xl-4">
                     <h3>Prashi, Infosys</h3>
-                    <span>“This Workshop Transformed My Approach to Trading”</span>
+                    <span>"This Workshop Transformed My Approach to Trading"</span>
                     <p>I cannot express enough gratitude to Ritvik and the incredible team at HavenArk. Before joining their program, my understanding of the markets was based on fragmented knowledge from YouTube videos. However, HavenArk provided me with a monumental reality check that completely transformed my approach to trading.</p>
                 </div>
             </div>
@@ -1923,8 +1927,8 @@
                 <img src="assets/images/feedback/user4.png" alt="user1">
                 <div class="testi-ctn ms-xl-4">
                     <h3>Chelsi, MBA Student</h3>
-                    <span>“Absolutely brilliant! I’m super confident to use smart money concepts now.”</span>
-                    <p>I had no idea of stock trading, but this webinar helped me understand everything from the absolute basics and now I’m super confident to apply these in the markets. The best thing I liked about this webinar is the live examples that Parang showed us, which shows transparency and high skill level. Highly recommended!</p>
+                    <span>"Absolutely brilliant! I'm super confident to use smart money concepts now."</span>
+                    <p>I had no idea of stock trading, but this webinar helped me understand everything from the absolute basics and now I'm super confident to apply these in the markets. The best thing I liked about this webinar is the live examples that Parang showed us, which shows transparency and high skill level. Highly recommended!</p>
                 </div>
             </div>
         </div>
@@ -1982,12 +1986,12 @@
                   target="_blank"
                   >Sign Up For English</a
                 >
-                <a
+                <!-- <a
                   href="https://parang.exlyapp.com/86991d04-ef41-4ff2-90d0-342d7a78b7e1?init_booking=true&amp;enable_discount=true&amp;&amp;&amp;"
                   class="green_btn btn-sky btn-animation px-5 hindiurl"
                   target="_blank"
                   >Sign Up For Hindi</a
-                >
+                > -->
               </div>
               <p class="font-14 mb-2">
                 (Offer expires in 10 minutes, Hurry Up!)
@@ -2061,9 +2065,8 @@
               >
                 <div class="accordion-body">
                   <p class="txt-white-70">
-                    The webinar will be delivered in both Hindi and English. You
-                    can choose your preferred language, and doubts can be asked
-                    in either language.
+                    The webinar will be delivered in English. You
+                    can ask any doubt in English.
                   </p>
                 </div>
               </div>
@@ -2114,7 +2117,7 @@
                   >
                 </div>
               </div>
-              <div class="timeline-details sky-details">
+              <!-- <div class="timeline-details sky-details">
                 <p class="mb-0 text-light hindidatetime3">
                   Mar 11, 2025 8:00 PM
                 </p>
@@ -2126,7 +2129,7 @@
                     >Hindi Webinar At ₹199</a
                   >
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -2137,7 +2140,7 @@
             <div class="col-12">
               <div class="footer-div">
                 <div class="logo">
-                  <img src="assets/images/havenark-preview.png" alt="loog" />
+                  <img src="assets/images/DP.png" alt="logo" />
                 </div>
                 <p class="logo-text">HavenArk</p>
                 <div class="text-center">
@@ -2575,58 +2578,16 @@
             style="display: block"
           >
             <path
-              d="M20.4115 3.48832C18.3715 1.44747 15.6592 0.217606 12.7798 0.0277473C9.90046 -0.162111 7.0502 0.700979 4.75984 2.4563C2.46948 4.21162 0.895133 6.73951 0.329958 9.56926C-0.235217 12.399 0.247308 15.3377 1.68768 17.8382L0 24.0006L6.30648 22.347C8.05076 23.2969 10.0052 23.7946 11.9914 23.7947H11.9964C14.3489 23.7945 16.6486 23.0969 18.6047 21.7899C20.5609 20.483 22.0856 18.6255 22.9862 16.4522C23.8869 14.2788 24.123 11.8873 23.6647 9.57981C23.2064 7.27233 22.0743 5.15252 20.4115 3.48832ZM11.9964 21.7862H11.9926C10.2218 21.7863 8.48364 21.3103 6.96 20.4081L6.5988 20.194L2.856 21.1751L3.85512 17.5271L3.61968 17.1532C2.45438 15.2963 1.93921 13.1048 2.15515 10.9232C2.37109 8.74163 3.3059 6.69365 4.81262 5.10125C6.31934 3.50884 8.31253 2.4623 10.4789 2.12614C12.6452 1.78999 14.8618 2.18328 16.7802 3.2442C18.6987 4.30511 20.2102 5.97349 21.0771 7.98705C21.944 10.0006 22.1172 12.2452 21.5694 14.3679C21.0216 16.4906 19.784 18.3711 18.051 19.7138C16.318 21.0564 14.1879 21.7851 11.9957 21.7852L11.9964 21.7862Z"
-              fill="#E0E0E0"
-            ></path>
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M9.05653 6.84318C8.83645 6.35382 8.60461 6.34398 8.39533 6.33558C8.22397 6.32814 8.02789 6.32862 7.83229 6.32862C7.68338 6.33255 7.5369 6.36725 7.40205 6.43052C7.26719 6.4938 7.14689 6.58429 7.04869 6.6963C6.71644 7.01089 6.45337 7.39126 6.27627 7.81315C6.09917 8.23505 6.01191 8.68921 6.02005 9.1467C6.02005 10.5925 7.07317 11.9895 7.22005 12.1856C7.36693 12.3817 9.25285 15.4431 12.2394 16.6208C14.7215 17.5995 15.2267 17.4049 15.7655 17.3559C16.3043 17.3069 17.5038 16.6453 17.7489 15.9591C17.9939 15.2729 17.9937 14.6849 17.9202 14.5621C17.8468 14.4392 17.6509 14.3662 17.3569 14.2191C17.0629 14.072 15.6186 13.3611 15.3491 13.2632C15.0796 13.1653 14.8837 13.1163 14.6879 13.4105C14.4921 13.7048 13.9293 14.366 13.7577 14.5625C13.5861 14.7591 13.4147 14.7833 13.1209 14.6365C12.2547 14.2911 11.4552 13.7977 10.7581 13.1782C10.1157 12.5845 9.56482 11.8988 9.12349 11.1435C8.95213 10.8497 9.10501 10.6904 9.25261 10.5435C9.38461 10.412 9.54637 10.2005 9.69349 10.0289C9.81408 9.88041 9.91291 9.71548 9.98701 9.5391C10.0261 9.45807 10.0444 9.36855 10.0403 9.27866C10.0361 9.18877 10.0095 9.10134 9.96301 9.0243C9.88885 8.87718 9.31765 7.42422 9.05653 6.84318Z"
+              d="M20.4115 3.48832C18.3715 1.44747 15.6592 0.217606 12.7798 0.0277473C9.90046 -0.162111 7.0502 0.700979 4.75984 2.4563C2.46948 4.21162 0.895133 6.73951 0.329958 9.56926C-0.235217 12.399 0.247308 15.3377 1.68768 17.8382L0 24.0006L6.30648 22.347C8.05076 23.2969 10.0052 23.7946 11.9914 23.7947H11.9964C14.3489 23.7945 16.6486 23.0969 18.6047 21.7899C20.5609 20.483 22.0856 18.6255 22.9862 16.4522C23.8869 14.2788 24.123 11.8873 23.6647 9.57981C23.2064 7.27233 22.0743 5.15252 20.4115 3.48832ZM11.9964 21.7862H11.9926C10.2218 21.7863 8.48364 21.3103 6.96 20.4081L6.5988 20.194L2.856 21.1751L3.85512 17.5271L3.61968 17.1406C2.62983 15.5665 2.10732 13.7473 2.11056 11.8914C2.11056 6.44496 6.54984 2.00568 12.0002 2.00568C14.3406 2.00688 16.5842 2.93496 18.2282 4.58088C19.8722 6.2268 20.7979 8.47128 20.7967 10.8117C20.7955 16.2581 16.3562 21.7862 11.9964 21.7862Z"
               fill="white"
             ></path>
             <path
-              d="M20.314 3.44995C18.2979 1.43114 15.6165 0.214135 12.7696 0.0256927C9.92272 -0.16275 7.10439 0.690221 4.83975 2.42568C2.57511 4.16114 1.01862 6.66071 0.46029 9.45869C-0.0980434 12.2567 0.37986 15.1622 1.80496 17.6339L0.136719 23.7268L6.37072 22.0922C8.09496 23.0312 10.027 23.5232 11.9903 23.5233H11.9954C14.3211 23.5235 16.5946 22.834 18.5285 21.5422C20.4624 20.2503 21.9699 18.414 22.8603 16.2655C23.7506 14.117 23.984 11.7527 23.5307 9.47156C23.0775 7.19043 21.9581 5.09491 20.314 3.44995ZM11.9954 21.5378H11.9927C10.2423 21.5379 8.52396 21.0674 7.01776 20.1755L6.66064 19.9639L2.96032 20.9337L3.94792 17.327L3.71536 16.9574C2.56347 15.1217 2.05427 12.9553 2.2678 10.7987C2.48133 8.64215 3.40549 6.61767 4.89499 5.04356C6.3845 3.46944 8.35488 2.43495 10.4964 2.1027C12.6379 1.77046 14.8291 2.15931 16.7255 3.20812C18.622 4.25693 20.1161 5.90623 20.973 7.89674C21.83 9.88725 22.0011 12.1061 21.4596 14.2045C20.918 16.3029 19.6945 18.1618 17.9813 19.489C16.2682 20.8162 14.1625 21.5365 11.9954 21.5366V21.5378Z"
+              d="M17.4155 14.3675C17.1215 14.2235 15.6655 13.5115 15.3955 13.4155C15.1255 13.3195 14.9275 13.2715 14.7295 13.5655C14.5315 13.8595 13.9675 14.5235 13.7935 14.7215C13.6195 14.9195 13.4455 14.9435 13.1515 14.7995C12.8575 14.6555 11.8895 14.3435 10.7335 13.3195C9.83151 12.5275 9.21551 11.5595 9.04151 11.2655C8.86751 10.9715 9.02151 10.8115 9.16751 10.6655C9.29951 10.5335 9.45951 10.3115 9.60751 10.1375C9.75551 9.96347 9.80351 9.84347 9.89951 9.64547C9.99551 9.44747 9.94751 9.27347 9.87551 9.12947C9.80351 8.98547 9.19551 7.52947 8.95151 6.94147C8.71551 6.37147 8.47151 6.44347 8.28951 6.43547C8.11551 6.42947 7.91751 6.42947 7.71951 6.42947C7.52151 6.42947 7.20751 6.50147 6.93751 6.79547C6.66751 7.08947 5.90351 7.80147 5.90351 9.25747C5.90351 10.7135 6.96751 12.1215 7.11551 12.3195C7.26351 12.5175 9.20951 15.5515 12.2255 16.8015C12.9375 17.1075 13.4935 17.2995 13.9255 17.4395C14.6375 17.6675 15.2815 17.6355 15.7915 17.5615C16.3615 17.4795 17.5615 16.8495 17.8055 16.1615C18.0495 15.4735 18.0495 14.8855 17.9775 14.7595C17.9055 14.6335 17.7075 14.5615 17.4135 14.4175L17.4155 14.3675Z"
               fill="white"
             ></path>
           </svg>
-          <span class="wa-chat-box-content-send-btn-text">Chat With Us</span>
-          <svg
-            width="9"
-            height="14"
-            viewBox="0 0 9 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            style="margin-left: auto; display: block"
-          >
-            <path
-              d="M1 1L7 7L1 13"
-              stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-            ></path>
-          </svg>
+          <div class="wa-chat-box-content-send-btn-text">Chat With Us</div>
         </a>
-
-        <div class="wa-chat-box-poweredby">
-          <svg
-            width="8"
-            height="15"
-            viewBox="0 0 8 15"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            style="display: block"
-          >
-            <path d="M3 15V9H0L5 0V6H8L3 15Z" fill="#999999"></path>
-          </svg>
-          Powered by
-          <a
-            rel="noopener noreffer"
-            href="https://www.wati.io/?utm_source=shopify&amp;utm_medium=chat_widget&amp;utm_campaign=shopify_widget"
-            target="_blank"
-            class="wa-chat-box-poweredby-link"
-            >wati.io</a
-          >
-        </div>
       </div>
     </div>
   </body>
