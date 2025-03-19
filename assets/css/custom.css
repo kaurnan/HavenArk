@@ -182,7 +182,8 @@ a.online-icon img { width: 90%; position: relative; top: 5px }
     max-width: 100%;
     z-index: -1;
 }
-
+.card_learn{height: 300px;
+     overflow: hidden;}
 .check_out_monster:before {
     content: '';
     position: absolute;
@@ -254,7 +255,7 @@ a.online-icon img { width: 90%; position: relative; top: 5px }
     max-width: 100%;
 }
 
-.swipers-wrapper {height: 100%;}
+/* .swipers-wrapper {height: 100%;} */
 .card_learn{height: 300px;}
 .swipers-wrapper .slick-track {
     display: flex;
@@ -295,9 +296,10 @@ a.online-icon img { width: 90%; position: relative; top: 5px }
 .stock-box:after { height: 30px; position: absolute; content: '' }
 .host_card iframe { max-width: 100% !important; background: #36363a !important; border-radius: 20px !important; margin-bottom: 40px; z-index: 1; aspect-ratio: 16 / 9 !important; }
 .bttm-lgo_inner a { padding: 12px 20px; border-radius: 50px; color: #bded4b; background: #58FF290F;}
-.bttm-logo img { width: 200px;
-    height: 200px;
-    margin: -30px 0 0 0;}
+.bttm-logo img { width: 120px;
+    height: auto;
+    /* margin: -30px 0 0 0; */
+}
 .bttm-lgo_inner { text-align: left }
 .bttm-lgo_inner h2 { margin-bottom: 20px; font-size: 32px; text-transform: uppercase }
 .dot-6 { width: 6px; height: 6px; background: rgb(255 255 255 / 30%); display: inline-block; border-radius: 50px; margin: 2px 8px }
@@ -561,6 +563,7 @@ a.online-icon img { width: 90%; position: relative; top: 5px }
 }
 .ur-coach-card { border-radius: 60px; padding: 48px 68px; position: relative }
 .ur-coach-card .right { position: absolute; bottom: 0; right: 0; width: 540px }
+.ur-coach-card .left { position: absolute; bottom: 0; right: 0; width: 540px }
 .ur-coach-card .left { width: 60% }
 .sebi_card_img:after,
 .ur-coach-card:after { content: ''; right: 0; width: 100%; height: 100%; position: absolute; z-index: -1; top: 0 }
@@ -683,16 +686,29 @@ span.text-outs { animation: .5s textOuts }
     left: 1px;
     right: 1px;
     bottom: 1px;
-    /*width: 99.5%;
-    height: 99.7%;*/
+    width: 0px;
+    /* height: 99.7%; */
     z-index: 1;
     border-radius: 16px;
 }
-.card_learn:before {background: linear-gradient(238.89deg, #1DF1FF -10.39%, #AE47FF 120.96%);content: '';position: absolute;top: 0px;left: 0px;right: 1px;bottom: 1px;width: 100%;height: 100%;z-index: 1;border-radius: 16px;filter: unset;}
+.card_learn:before {background: linear-gradient(238.89deg, #1DF1FF -10.39%, #AE47FF 120.96%);
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 1px;
+    bottom: 1px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border-radius: 16px;
+    filter: unset;
+}
 
 .card_learn > div {
     position: relative;
     z-index: 111;
+    padding: 0px;
 }
 .marquee-content { display: inline-block; animation: 40s linear infinite marquee }
 .bottom_ellipse.monster:after,
@@ -750,7 +766,7 @@ span.text-outs { animation: .5s textOuts }
 .items.slick-slide.slick-active {-webkit-transform: scale(.9) translate(60px); -ms-transform: scale(.9) translate(60px); transform: scale(.9) translate(60px); -webkit-transition: all .4s ease-in-out; -o-transition: all .4s ease-in-out; transition: all .4s ease-in-out}
 .items.slick-slide.slick-center {-webkit-transform: scale(1.01); -ms-transform: scale(1.01); transform: scale(1.01); z-index: 30; cursor: pointer; -webkit-transition:all .4s ease-in-out; -o-transition:all .4s ease-in-out; transition:all .4s ease-in-out}
 .slick-slide::after { -webkit-transition: -webkit-transform .4s;transition: -webkit-transform .4s;-o-transition: transform .4s;transition: transform .4s;transition: transform .4s, -webkit-transform .4s}
-.card_learn { width: 430px }
+.card_learn { width: 400px; padding: 0px 0px; }
 .learn_slide_wrap .slick-track{display: -webkit-box !important;display: -ms-flexbox !important;display: flex !important;}
 .swipers-wrapper .items{height: inherit !important;}
 .card_learn{height: 500px !important;min-height: 100% !important;}
@@ -872,12 +888,24 @@ ul.contat_list li a img { position: absolute; top: -12px; left: 0 }
     text-fill-color: transparent;
     font-weight: 900 !important;}
 .ondem_right { border: 0 }
-.ondem_right { z-index: -1; width: 100%; margin-bottom: 10px;
+.ondem_right { z-index: -1; width: 100%;
     overflow: hidden; }
 .ondem_left { border: 0 }
 .ondem_left { z-index: -1; width: 100%;
-    height: 400px;
+    /* height: 400px; */
     overflow: hidden; }
+
+.ondem_right {
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ondem_left{
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+}
 .banner_crd_brder { padding: 40px; border-radius: 16px; position: relative; z-index: 1; margin-bottom: 51px }
 /*.banner_crd_brder:before { content: ""; width: 100%; height: 100%; display: block; position: absolute; top: 0; right: auto; bottom: auto; left: 0; border: 2px solid #29e337; border-radius: 2.5rem; transition: .6s ease-in-out 1s; -webkit-animation: 1.6s ease-in-out infinite alternate both paused in-width-down; animation: 1.6s ease-in-out infinite alternate both paused in-width-down; opacity: 1; pointer-events: none }*/
 /*.banner_crd_brder:hoverbefore { opacity: 1; -webkit-animation-play-state: running; animation-play-state: running }*/
@@ -1076,7 +1104,9 @@ ul.contat_list li a img { position: absolute; top: -12px; left: 0 }
 .coach-left .cach-card  span{font-size:30px;line-height:1.2;font-weight:500;}
 .banner_crd_brder:before{content:"";width:100%;height:100%;display:block;position:absolute;top:0;right:auto;bottom:auto;left:0;border:2px solid rgba(41,227,55,1);border-radius:2.5rem;    /* -webkit-mask-image: radial-gradient(ellipse farthest-corner at var(--val1, 0) 100%, #000 0, transparent 50%, transparent 75%, #000 100%); */    /* mask-image: radial-gradient(ellipse farthest-corner at var(--val1, 0) 100%, #000 0, transparent 75%, transparent 75%, #000 100%); */
 transition:all 0.6s ease-in-out;transition-delay:1s;-webkit-animation:in-width-down 1.6s ease-in-out 0s infinite both;animation:in-width-down 1.6s ease-in-out 0s infinite both;-webkit-animation-direction:alternate;animation-direction:alternate;opacity:1;-webkit-animation-play-state:paused;animation-play-state:paused;pointer-events:none;}
-.coach-left{width:60%;}
+.coach-left{width:60%; position: relative;
+    right:0px;
+    bottom:-56px;}
 .coach-right{width:40%;    position: relative;
     right:0px;
     bottom:-56px;}

@@ -171,13 +171,17 @@ a.online-icon img{top:0;width: 70%;}
 .bttm-lgo_inner h2{font-size: 25px}
 
 /*    .host_card iframe{height: 400px !important;}*/
-.bttm-logo img{width: 140px;height: 140px;margin:-40px 0 0 0;}
+.bttm-logo img{height: auto;margin:-40px 0 0 0;
+    width:63px; 
+    margin-top: 10px; 
+    margin-right: 33px;
+}
 .bttm-logo {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
+    /* margin-top: 10px; */
   }
 
   .bttm-logo .d-md-flex {
@@ -438,7 +442,8 @@ font-weight: 700;
 .host_card iframe{
 /*    	height: 300px !important;*/
     margin-bottom:0px;}
-.bttm-logo img{width:100px;height:100px;margin: 0;} 
+.bttm-logo img{height:100px;
+    width:93px; margin-top: 30px; margin-right: 33px;} 
 .bttm-lgo_inner h2{font-size: 24px;text-transform: capitalize;}
 
 .help-trader .right h2{font-size: 20px;}
@@ -464,9 +469,9 @@ font-weight: 700;
 .feedback-box .feed_ctn p{font-size:14px;line-height:25px;}
 .feedback-box .feed_ctn span{font-size:16px;line-height:20px;margin-bottom:15px;}
 
-.hoster-by{padding: 2px 10px;border-radius:4px;font-size:12px;background: rgba(54, 232, 67, 0.1);border-radius: 4px;font-weight:500;background: linear-gradient(to left,#bded4b,#76FF80);text-transform: capitalize;position: relative;border: 1px solid transparent;}
-.hoster-by:after{content:'';position:absolute;top:0;bottom:0;left:0;right:0;background:rgb(34 33 36);z-index:0;border-radius:4px;}
-.hoster-by span{position:relative;z-index:1;}
+.hoster-by{padding: 2px 10px;display: flex;border-radius:4px;font-size:12px;background: rgba(54, 232, 67, 0.1);border-radius: 4px;font-weight:500;background: linear-gradient(to left,#bded4b,#76FF80);text-transform: capitalize;position: relative;border: 1px solid transparent;}
+.hoster-by:after{content:''; position:absolute;top:0;bottom:0;left:0;right:0;background:rgb(34 33 36);z-index:0;border-radius:4px;}
+.hoster-by span{display: flex; flex-direction: column; position:relative;z-index:1;}
 .sebi-resp{padding:0px 0 0 12px;
 /*        background: linear-gradient(89.17deg, #384547 -0.08%, #274034 99.63%);*/
     border-radius:14px;    position: relative;
@@ -511,6 +516,7 @@ font-size: 14px;
 .ur-coach-card .left p{font-size:14px;line-height:23px;margin-bottom:12px;}
 .seb_card{display:none!important;}
 .ondem_right .seb_card{display:flex !important;}
+.ondem_left .seb_card{display:flex !important;}
 .ur-coach-card:after{border-radius:16px;background: url(../images/banner/your_coach_card_resp.png);    background-size: cover;
 background-repeat: no-repeat;
 background-position: center center;}
@@ -762,6 +768,8 @@ right: 10%;}
 
 .ondem_right .seb_card .sebi-ctn span{font-size:14px;font-weight: 700;}
 .ondem_right .seb_card .sebi-ctn h3{font-size:16px !important;}
+.ondem_left .seb_card .sebi-ctn span{font-size:14px;font-weight: 700;}
+.ondem_left .seb_card .sebi-ctn h3{font-size:16px !important;}
 
 .last-seats-tag{font-size: 15px;}
 .banner-caption h1 + span{font-size:18px;}
@@ -832,8 +840,7 @@ padding: 20px 0;
 }
 
 /* Make the images responsive */
-.ondem_right img,
-.ondem_left img {
+.ondem_right img{
 max-height: 250px;
 height: auto;
 width: auto;
@@ -923,9 +930,9 @@ font-size: 24px;
 
 /*    .hero-banner-dv h1 .animate-text span{    font-size: 40px;line-height: 55px;}*/
 /*    .banner-caption span{font-size: 18px;}*/
-
-
-.learn_img img{height:219px;}
+.card_learn{width:100%;}
+.learn_img{height: 100%; overflow: hidden;}
+.learn_img img{height:219px; }
  .bottom_ellipse.monster:before{background-size: 110%}
  .help-trader .digit-counter{font-size:50px;}
  .host_card{padding: 20px;}
@@ -941,6 +948,8 @@ font-size: 24px;
 .green-shdow-btn span.upcom_pric{font-size: 20px;line-height: 35px;}
 
 .ondem_right img{height: 380px;}
+.ondem_left img{height: 380px;}
+
 .stock-icon img.first{top: 2%;left:16%;}
 .stock-icon img.second{top:11%;left: 4%;}
 .stock-icon img.three { top: 17%; left: 1%; }
@@ -1051,6 +1060,8 @@ z-index: -1;
 ul.contat_list li{padding-bottom: 30px;}
 .slider-block .slider .slide{height:68px;width:170px;}
 .ondem_right img{height: 300px;}
+.ondem_left img{height: 300px;}
+
 .trad-career-sec .swiper-button-next{top:66%;width:40px;height:40px;}
 .trad-career-sec .swiper-button-prev{top:66%;width:40px;height:40px;}
 
@@ -1063,7 +1074,7 @@ ul.contat_list li{padding-bottom: 30px;}
 .timeline-details p{font-size: 15px;}
 .sign-btn .hero-signup { padding: 5px 15px !important; font-size: 13px; }
 .card-contact{padding: 15px 15px;}
-
+.card_learn{width:100%;}
 .trad-career-sec .swiper-button-next{top:72%;width:30px;height:30px;}
 .trad-career-sec .swiper-button-prev{top:72%;width:30px;height:30px;}
 }
@@ -1076,10 +1087,12 @@ ul.contat_list li{padding-bottom: 30px;}
 .resp-animate span{font-size:40px!important;line-height:45px;}
 .bottom_ellipse.feedback:after{height:243px;width:300px;top:-101px;z-index:-1;}
 .time_is_ticking .heading_dv::after{height:303px;width:300px;z-index:-1;top:-134px;}
+.card_learn{width:100%;}
 .upcom_main{padding:40px 20px}
 .bttm-logo img {
     width: 60px;
     height: 60px;
+    /* width:93px; margin-top: 30px; margin-right: 33px; */
   }
 
   .bttm-lgo_inner h2 {
