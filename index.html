@@ -501,7 +501,7 @@
             >
               <ul class="navbar-nav m-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link highlight-sv" aria-current="page" href="#"
+                  <a class="nav-link highlight-sv" style="color: #66FCF1" aria-current="page" href="#"
                     >Webinar</a
                   >
                 </li>
@@ -509,7 +509,7 @@
                                 <a class="nav-link" href="on-demand-webinar.html">On-Demand Webinar</a>
                             </li> -->
                 <li class="nav-item">
-                  <a class="nav-link" href="https://wa.link/zga4xa" target="_blank">Contact Us</a>
+                  <a class="nav-link" style="color: #66FCF1" href="https://wa.link/zga4xa" target="_blank">Contact Us</a>
                 </li>
               </ul>
               <form class="d-flex add-to-cart">
@@ -632,12 +632,27 @@
             </div>
           </div>
           <style>
-            .zoomed-image {
-              height: auto !important;
-              max-height: 507px !important;
-              width: 130% !important;
-              object-fit: contain !important;
-              transform: scale(1.3) !important;
+            @media (min-width: 992px) {
+              .zoomed-image {
+                height: auto !important;
+                max-height: 735px !important; /* Increased by 45% from 507px */
+                width: 188.5% !important; /* Increased by 45% from 130% */
+                object-fit: contain !important;
+                transform: scale(1.3) !important;
+              }
+              .ondem_left, .ondem_right {
+                width: 145%;
+                margin: 0 -22.5%;
+              }
+            }
+            @media (max-width: 991px) {
+              .zoomed-image {
+                height: auto !important;
+                max-height: 507px !important;
+                width: 130% !important;
+                object-fit: contain !important;
+                transform: scale(1.3) !important;
+              }
             }
           </style>
           <div class="row align-items-center"> 
@@ -656,23 +671,23 @@
             <div class="col-xl-6 col-lg-6 mb-lg-0 mb-4">
               <div class="banner-caption text-center">
                 <div class="">
-                  <h1 id="mainHeading" class="d-md-block d-none">
+                  <h1 id="mainHeading" class="d-md-block d-none" style="background: linear-gradient(45deg, #66FCF1, #45A29E); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
                     India's Largest 
                     <div class="ondem_ban_text d-inline fw-bolder">
-                      Stock Trading
+                      <span style="background: linear-gradient(45deg, #66FCF1, #45A29E); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Stock Trading</span>
                     </div>
                     Community
                   </h1>
 
-                  <h1 id="mainHeading" class="d-md-none d-block">
+                  <h1 id="mainHeading" class="d-md-none d-block" style="background: linear-gradient(45deg, #66FCF1, #45A29E); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
                     India's Largest 
                     <div class="ondem_ban_text d-inline fw-bolder">
-                      Stock Trading
+                      <span style="background: linear-gradient(45deg, #66FCF1, #45A29E); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Stock Trading</span>
                     </div>
                     Community
                   </h1>
 
-                  <span class="mt-3 d-block"
+                  <span class="mt-3 d-block gradient-text"
                     >Catch The Breakouts Before Everyone Else.</span
                   >
                 </div>
@@ -682,7 +697,7 @@
                     <div class="sign-btn mt-0 ms-lg-5">
                       <a
                         href=""
-                        class="hero-signup btn-animation geturl aos-init add-to-cart"
+                        class="hero-signup btn-animation geturl aos-init add-to-cart outline-button"
                         id="cta-2"
                         target="_blank"
                         >Join Webinar</a
@@ -694,8 +709,9 @@
                   <a
                     href="https://wa.link/zga4xa"
                     id="cta-2"
-                    class="hero-signup btn-animation geturl mb-4"
+                    class="hero-signup btn-animation geturl mb-4 outline-button"
                     target="_blank"
+                    style="color: #fff !important;"
                     >Join Now (English) At ₹199</a
                   >
                 </div>
@@ -717,19 +733,58 @@
           <style>
             @keyframes colorTransition {
               0% {
-                color: #1a1a1a;
+                color: #66FCF1;
               }
               50% {
-                color: #bded4b;
+                color: #45A29E;
               }
               100% {
-                color: #1a1a1a;
+                color: #66FCF1;
+              }
+            }
+
+            @keyframes glowing {
+              0% {
+                box-shadow: 0 0 5px #66FCF1, 0 0 10px #66FCF1, 0 0 15px #66FCF1;
+              }
+              50% {
+                box-shadow: 0 0 10px #45A29E, 0 0 15px #45A29E, 0 0 20px #45A29E;
+              }
+              100% {
+                box-shadow: 0 0 5px #66FCF1, 0 0 10px #66FCF1, 0 0 15px #66FCF1;
               }
             }
 
             .animated-name {
               animation: colorTransition 5s ease-in-out infinite;
               font-weight: bold;
+            }
+
+            .gradient-text {
+              background: linear-gradient(45deg, #66FCF1, #45A29E);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+
+            .blue-gradient-text {
+              background: linear-gradient(45deg, #66FCF1, #45A29E);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+
+            .outline-button {
+              background: transparent !important;
+              border: 2px solid #66FCF1 !important;
+              color: #fff !important;
+              font-weight: bold !important;
+              transition: all 0.3s ease !important;
+            }
+
+            .outline-button:hover {
+              background: linear-gradient(45deg, #66FCF1, #45A29E) !important;
+              color: #1a1a1a !important;
+              transform: translateY(-2px) !important;
+              animation: glowing 3s infinite;
             }
 
             .profile-card {
@@ -890,7 +945,7 @@
           >
             <h1 id="mainHeading" class="d-inline-block">
               Master The Art of<br />
-              <div class="animate-text">
+              <div class="animate-text" style="background: linear-gradient(45deg, #66FCF1, #45A29E); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
                 <span class="">Order Flow</span>
                 <span class="text-ins">Smart Money</span>
                 <span class="">Volatility</span>
@@ -916,13 +971,14 @@
                                 <a href="index.html" class="hero-signup btn-animation geturl aos-init add-to-cart" id="cta-2" target="_blank">Join Webinar</a>
                             </div>
                         </div> -->
-              <div class="timeline-details mb-5">
+              <div class="timeline-details mb-5" style="border: 1px solid #66FCF1; background: rgba(102, 252, 241, 0.1);">
                 <p class="mb-0 text-light datetime">Mar 31, 2025 8:00 PM</p>
                 <div class="sign-btn mt-0 ms-lg-5">
                   <a
                     href="https://wa.link/zga4xa"
                     class="hero-signup btn-animation geturl aos-init"
                     target="_blank"
+                    style="background: linear-gradient(180deg, #66FCF1 0, #45A29E 100%); box-shadow: 0 0 30px 1px rgba(102, 252, 241, 0.4);"
                     >English Webinar At ₹199</a
                   >
                 </div>
@@ -962,7 +1018,7 @@
                   />
                   <div class="d-md-none d-inline-block host-brder">
                     <div class="hoster-by">
-                      <span>Hosted by HavenArk</span>
+                      <span style="color: #66FCF1">Hosted by HavenArk</span>
                     </div>
                   </div>
                 </div>
@@ -988,7 +1044,7 @@
                   <h2 class="text-white">
                     <span class="d-md-block d-none">HOSTED BY HAVENARK - 
                     </span>India's
-                    <span class="green-txt-resp"> #1</span> Professional <br />
+                    <span style="color: #66FCF1"> #1</span> Professional <br />
                     Trading Community
                   </h2>
                   <!-- <a href="#" class="d-md-inline-block d-none">
@@ -997,35 +1053,10 @@
                   </a> -->
                 </div>
               </div>
-              <!-- <div
-                class="d-md-none d-flex justify-content-center align-items-center position-relative sebi_card_img sebi-trad-resp"
-              >
-                <div class="sebi-resp-logo">
-                  <img
-                    src="./assets/images/ic_sharp-verified.svg"
-                    alt="ic_sharp-verified"
-                  />
-                </div>
-                <div class="sebi-resp">
-                  <p class="mb-lg-3 mb-0">
-                    <span class="text-uppercase">SEBI Registered</span> 
-                    <span class="text-capitalize">Research Analyst</span>
-                  </p>
-                  <span></span>
-                </div>
-              </div> -->
+              
             </div>
           </div>
-          <!--  <div class="row justify-content-center d-md-none d-flex">
-                    <div class="col-lg-8 text-center">
-                        <div class="timeline-details mt-lg-4 mt-4">
-                            <p class="mb-0 text-light datetimemobile"></p>
-                            <div class="sign-btn mt-0 ms-lg-5">
-                                <a href="#" class="hero-signup d-block btn-animation geturl" target="_blank">Live Webinar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+          
         </div>
       </section>
       <!--end-->
@@ -1143,9 +1174,33 @@
         <div class="container"> 
             <div class="head_wrap position-relative mb-lg-5 mb-4 prple-shadow yello-shadow" data-aos="fade-up" data-aos-duration="1000">
                 <div class="heading_dv text-center">
-                    <h2 class="text-white">What Will You Learn<br> <span> In This Webinar ?</span></h2>
-                </div> 
+                    <h2 class="text-white">What Will You Learn<br> 
+                      <span id="typewriter" style="display: inline-block; background: linear-gradient(45deg, #66FCF1, #45A29E); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></span>
+                    </h2>
+                </div>
+                <script>
+                  const text = "In This Webinar ?";
+                  let i = 0;
+                  const speed = 100;
+                  
+                  function typeWriter() {
+                    if (i < text.length) {
+                      document.getElementById("typewriter").innerHTML += text.charAt(i);
+                      i++;
+                      setTimeout(typeWriter, speed);
+                    } else {
+                      setTimeout(() => {
+                        document.getElementById("typewriter").innerHTML = "";
+                        i = 0;
+                        typeWriter();
+                      }, 1000);
+                    }
+                  }
+                  
+                  window.onload = typeWriter;
+                </script>
             </div>  
+
             <!-- Desktop Slider -->
             <div class="position-relative d-none d-md-block">
               <div class="learn_slide_wrap screenshot_slider">
@@ -1182,262 +1237,200 @@
               </div>
             </div>
 
-            <!-- Mobile Swipe Cards -->
-            <div class="mobile-cards-container d-md-none">
-              <!-- <button class="nav-btn prev-btn">&lt;</button>
-              <button class="nav-btn next-btn">&gt;</button> -->
-              
-              <div class="mobile-card-stack">
-                <div class="mobile-card" data-index="0">
+            <!-- Mobile Carousel -->
+            <div class="mobile-carousel d-md-none">
+              <div class="carousel-container">
+                <div class="carousel-slide">
                   <img src="assets/images/Website-Gif/tile1.jpeg" alt="learn1">
                 </div>
-                <div class="mobile-card" data-index="1">
+                <div class="carousel-slide">
                   <img src="assets/images/Website-Gif/tile2.jpeg" alt="learn2">
                 </div>
-                <div class="mobile-card" data-index="2">
+                <div class="carousel-slide">
                   <img src="assets/images/Website-Gif/tile3.jpeg" alt="learn3">
                 </div>
-                <div class="mobile-card" data-index="3">
+                <div class="carousel-slide">
                   <img src="assets/images/Website-Gif/tile4.jpeg" alt="learn4">
                 </div>
               </div>
             </div>
-          
+
         </div>
       </section>
 
       <style>
-        .mobile-cards-container {
-          width: 100%;
-          height: 600px;
-          position: relative;
-          overflow: hidden;
-        }
+        @media (max-width: 768px) {
+          .mobile-carousel {
+            padding: 30px 15px;
+            margin: 0 -15px;
+          }
 
-        .mobile-card-stack {
-          width: 100%;
-          height: 100%;
-          position: relative;
-        }
+          .carousel-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+            padding: 20px 0;
+          }
 
-        .mobile-card {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          background: transparent;
-          border-radius: 10px;
-          cursor: grab;
-          transition: transform 0.3s ease-out;
-          touch-action: none;
-        }
+          .carousel-container::-webkit-scrollbar {
+            display: none;
+          }
 
-        .mobile-card img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          border-radius: 10px;
-        }
+          .carousel-slide {
+            flex: 0 0 85%;
+            margin-right: 15px;
+            scroll-snap-align: center;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(102, 252, 241, 0.3);
+            transition: transform 0.3s ease;
+          }
 
-        .mobile-card.swiped {
-          transform: translateX(-200%);
-          opacity: 0;
-        }
+          .carousel-slide:last-child {
+            margin-right: 0;
+          }
 
-        .nav-btn {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          z-index: 100;
-          background: rgba(255, 255, 255, 0.3);
-          border: none;
-          border-radius: 50%;
-          width: 40px;
-          height: 40px;
-          font-size: 20px;
-          color: white;
-          cursor: pointer;
-          backdrop-filter: blur(5px);
-          transition: background 0.3s ease;
-        }
+          .carousel-slide img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 15px;
+          }
 
-        .nav-btn:hover {
-          background: rgba(255, 255, 255, 0.5);
-        }
-
-        .prev-btn {
-          left: 10px;
-        }
-
-        .next-btn {
-          right: 10px;
+          .carousel-slide:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 30px rgba(102, 252, 241, 0.5);
+          }
         }
       </style>
 
       <script>
         document.addEventListener('DOMContentLoaded', function() {
-          const cards = document.querySelectorAll('.mobile-card');
-          const prevBtn = document.querySelector('.prev-btn');
-          const nextBtn = document.querySelector('.next-btn');
-          
-          function swipeCard(direction) {
-            const currentCard = document.querySelector('.mobile-card:not(.swiped)');
-            if (!currentCard) return;
-            
-            currentCard.style.transition = 'transform 0.3s ease-out';
-            currentCard.classList.add('swiped');
-            
-            setTimeout(() => {
-              currentCard.style.transform = '';
-              currentCard.classList.remove('swiped');
-              if (direction === 'next') {
-                currentCard.parentNode.appendChild(currentCard);
-              } else {
-                currentCard.parentNode.insertBefore(
-                  currentCard.parentNode.lastElementChild,
-                  currentCard.parentNode.firstElementChild
-                );
-              }
-            }, 300);
-          }
+          const carousel = document.querySelector('.carousel-container');
+          let isDown = false;
+          let startX;
+          let scrollLeft;
 
-          // Touch events for swipe
-          cards.forEach(card => {
-            let startX = 0;
-            let currentX = 0;
-            
-            card.addEventListener('touchstart', e => {
-              startX = e.touches[0].clientX;
-              card.style.transition = 'none';
-            });
-            
-            card.addEventListener('touchmove', e => {
-              currentX = e.touches[0].clientX - startX;
-              card.style.transform = `translateX(${currentX}px)`;
-            });
-            
-            card.addEventListener('touchend', e => {
-              card.style.transition = 'transform 0.3s ease-out';
-              
-              if (Math.abs(currentX) > 100) {
-                // Swipe threshold met
-                if (currentX > 0) {
-                  swipeCard('prev');
-                } else {
-                  swipeCard('next');
-                }
-              } else {
-                // Return to original position
-                card.style.transform = '';
-              }
-              
-              startX = 0;
-              currentX = 0;
-            });
+          carousel.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - carousel.offsetLeft;
+            scrollLeft = carousel.scrollLeft;
           });
 
-          // Button click events
-          prevBtn.addEventListener('click', () => swipeCard('prev'));
-          nextBtn.addEventListener('click', () => swipeCard('next'));
+          carousel.addEventListener('mouseleave', () => {
+            isDown = false;
+          });
+
+          carousel.addEventListener('mouseup', () => {
+            isDown = false;
+          });
+
+          carousel.addEventListener('mousemove', (e) => {
+            if(!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - carousel.offsetLeft;
+            const walk = (x - startX);
+            carousel.scrollLeft = scrollLeft - walk;
+          });
         });
+      </script>
+             
       </script>
       <!--end-->
       <div class="text-center mt-4 mb-4">
-        <a href="partners.html" class="d-inline-block green_btn btn-animation mb-2 geturl">Checkout Our Partners</a>
+        <a href="partners.html" class="d-inline-block outline-button btn-animation mb-2 geturl" style="padding: 16px 15px; border-radius: 10px;">Checkout Our Partners</a>
       </div>
       <!--start-->
       <section class="check_out_monster">
         <div class="container">
             <div class="head_wrap position-relative mb-lg-5 mb-4 prple-shadow yello-shadow" data-aos="fade-up" data-aos-duration="1000">
                 <div class="heading_dv text-center">
-                    <h2 class="text-white">Check Out Our <span>Trading Community</span></h2>
+                    <h2 class="text-white">Check Out Our <span style="background: linear-gradient(45deg, #66FCF1, #45A29E); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Trading Community</span></h2>
                 </div>
             </div>
     
             <!-- Desktop Only -->
             <div class="monster_wrap monster_desk d-md-block d-none">
-                <div class="monster_card">
-                    <div class="monster_img img_before position-relative">
-                        <div class="after_before position-absolute">
-                            <span class="before-btn">Before</span>
-                        </div>
-                        <img src="assets/images/after_before/before_1.png" alt="before">
+                <div class="monster_card" style="border: 2px solid #66FCF1; max-width: 300px; margin: 10px;">
+                    <div class="monster_img position-relative">
+                        <img src="assets/images/after_before/sc1.png" alt="trading screenshot" style="width: 100%; height: auto;">
                     </div>
                 </div>
-                <div class="monster_card">
-                    <div class="monster_img img_before position-relative">
-                        <div class="after_before position-absolute">
-                            <span class="after-btn">After</span>
-                        </div>
-                        <img src="assets/images/after_before/after_01.png" alt="after">
+                <div class="monster_card" style="border: 2px solid #66FCF1; max-width: 300px; margin: 10px;">
+                    <div class="monster_img position-relative">
+                        <img src="assets/images/after_before/sc2.png" alt="trading screenshot" style="width: 100%; height: auto;">
                     </div>
                 </div>
-                <div class="monster_card">
-                    <div class="monster_img img_before position-relative">
-                        <div class="after_before position-absolute">
-                            <span class="before-btn">Before</span>
-                        </div>
-                        <img src="assets/images/after_before/before_02.png" alt="before">
+                <div class="monster_card" style="border: 2px solid #66FCF1; max-width: 300px; margin: 10px;">
+                    <div class="monster_img position-relative">
+                        <img src="assets/images/after_before/sc3.png" alt="trading screenshot" style="width: 100%; height: auto;">
                     </div>
                 </div>
-                <div class="monster_card">
-                    <div class="monster_img img_before position-relative">
-                        <div class="after_before position-absolute">
-                            <span class="after-btn">After</span>
-                        </div>
-                        <img src="assets/images/after_before/after_02.png" alt="after">
+                <div class="monster_card" style="border: 2px solid #66FCF1; max-width: 300px; margin: 10px;">
+                    <div class="monster_img position-relative">
+                        <img src="assets/images/after_before/sc4.png" alt="trading screenshot" style="width: 100%; height: auto;">
                     </div>
                 </div>
-                <div class="monster_card">
-                    <div class="monster_img img_before position-relative">
-                        <div class="after_before position-absolute">
-                            <span class="before-btn">Before</span>
-                        </div>
-                        <img src="assets/images/after_before/before_03.png" alt="before">
-                    </div>
-                </div>
-                <div class="monster_card">
-                    <div class="monster_img img_before position-relative">
-                        <div class="after_before position-absolute">
-                            <span class="after-btn">After</span>
-                        </div>
-                        <img src="assets/images/after_before/after_03.png" alt="after">
+                <div class="monster_card" style="border: 2px solid #66FCF1; max-width: 300px; margin: 10px;">
+                    <div class="monster_img position-relative">
+                        <img src="assets/images/after_before/sc5.png" alt="trading screenshot" style="width: 100%; height: auto;">
                     </div>
                 </div>
             </div>
     
             <!-- Responsive Only -->
-            <div class="monster_wrap monster_resp d-md-none d-block">
-              <div class="monster_card">
-                  <div class="monster_img img_before position-relative">
-                      <div class="res_af_img">
-                          <img src="assets/images/after_before/before_1.png" alt="before" class="before_img">
-                          <img src="assets/images/after_before/after_01.png" alt="after" class="after_img">
-                      </div>
-                  </div>
-              </div>
-              <div class="monster_card">
-                  <div class="monster_img img_before position-relative">
-                      <div class="res_af_img">
-                          <img src="assets/images/after_before/before_02.png" alt="before" class="before_img">
-                          <img src="assets/images/after_before/after_02.png" alt="after" class="after_img">
-                      </div>
-                  </div>
-              </div>
-              <div class="monster_card">
-                  <div class="monster_img img_before position-relative">
-                      <div class="res_af_img">
-                          <img src="assets/images/after_before/before_03.png" alt="before" class="before_img">
-                          <img src="assets/images/after_before/after_03.png" alt="after" class="after_img">
-                      </div>
-                  </div>
-              </div>
-          </div>
+            <div class="monster_wrap monster_resp d-md-none d-block monster-mobile-spacing">
+                <div class="monster_card monster-card-mobile">
+                    <div class="monster_img position-relative">
+                        <img src="assets/images/after_before/sc1.png" alt="trading screenshot" style="width: 100%; height: auto;">
+                    </div>
+                </div>
+                <div class="monster_card monster-card-mobile">
+                    <div class="monster_img position-relative">
+                        <img src="assets/images/after_before/sc2.png" alt="trading screenshot" style="width: 100%; height: auto;">
+                    </div>
+                </div>
+                <div class="monster_card monster-card-mobile">
+                    <div class="monster_img position-relative">
+                        <img src="assets/images/after_before/sc3.png" alt="trading screenshot" style="width: 100%; height: auto;">
+                    </div>
+                </div>
+                <div class="monster_card monster-card-mobile">
+                    <div class="monster_img position-relative">
+                        <img src="assets/images/after_before/sc4.png" alt="trading screenshot" style="width: 100%; height: auto;">
+                    </div>
+                </div>
+                <div class="monster_card monster-card-mobile">
+                    <div class="monster_img position-relative">
+                        <img src="assets/images/after_before/sc5.png" alt="trading screenshot" style="width: 100%; height: auto;">
+                    </div>
+                </div>
+            </div>
+            <style>
+                .monster-card-mobile {
+                    max-width: 250px !important;
+                    margin: 0 auto 10px auto !important;
+                    padding: 10px !important;
+                    background: rgba(102, 252, 241, 0.1);
+                    animation: glowPulse 2s infinite;
+                }
+                
+                @keyframes glowPulse {
+                    0% { background: rgba(102, 252, 241, 0.1); }
+                    50% { background: rgba(102, 252, 241, 0.2); box-shadow: 0 0 10px rgba(102, 252, 241, 0.3); }
+                    100% { background: rgba(102, 252, 241, 0.1); }
+                }
+            </style>
     
             <!-- Call-To-Action Button -->
             <div class="text-center" data-aos="fade-up" data-aos-duration="1000">
                 <div class="check-btn-m">
-                    <a href="#" class="d-inline-block green_btn mb-2 geturl" target="_blank">Join Now (English) At ₹199</a>
-                    <!-- <a href="#" class="d-inline-block green_btn mb-2 hindiurl btn-sky" target="_blank">Join Now (Hindi) At ₹199</a> -->
+                    <a href="#" class="d-inline-block green_btn mb-2 geturl" target="_blank" 
+                       style="background: transparent; color: #fff; border: 2px solid #66FCF1; transition: all 0.3s ease;"
+                       onmouseover="this.style.background='#66FCF1'; this.style.color='#000'; this.style.boxShadow='0 0 20px rgba(102, 252, 241, 0.4)'"
+                       onmouseout="this.style.background='transparent'; this.style.color='#fff'; this.style.boxShadow='none'">Join Now (English) At ₹199</a>
                 </div>
                 <span class="d-block">(9+ Years Of Trading Experience)</span>
             </div>
@@ -1516,7 +1509,7 @@
             <div class="heading_dv text-center">
               <h2 class="text-white">
                 After Attending This Webinar <br />
-                <span>You Will Be Able To</span>
+                <span style="background: linear-gradient(45deg, #66FCF1, #45A29E); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">You Will Be Able To</span>
               </h2>
             </div>
           </div>
@@ -1530,7 +1523,7 @@
                 data-aos-duration="1000"
               >
                 <div class="feature_box">
-                  <div class="feature_icon">
+                  <div class="feature_icon" style="filter: hue-rotate(140deg) brightness(1.2);">
                     <img
                       src="./assets/images/icon/monthly_returns.png"
                       alt="monthly_returns"
@@ -1552,7 +1545,7 @@
                 data-aos-duration="1000"
               >
                 <div class="feature_box h-100">
-                  <div class="feature_icon">
+                  <div class="feature_icon" style="filter: hue-rotate(140deg) brightness(1.2);">
                     <img
                       src="./assets/images/icon/big_moves.png"
                       alt="big_moves"
@@ -1574,7 +1567,7 @@
                 data-aos-duration="1000"
               >
                 <div class="feature_box h-100">
-                  <div class="feature_icon">
+                  <div class="feature_icon" style="filter: hue-rotate(140deg) brightness(1.2);">
                     <img
                       src="./assets/images/icon/professional.png"
                       alt="professional"
@@ -1606,12 +1599,13 @@
                 data-aos="fade-up"
                 data-aos-duration="1000"
               >
-                <span id="time">04 : 44</span>
+                <span id="time" style="color: #66FCF1; text-shadow: 0 0 10px rgba(102, 252, 241, 0.2);">04 : 44</span>
               </div>
               <p
                 class="last-seats-tag"
                 data-aos="fade-up"
                 data-aos-duration="1000"
+                style="color: #66FCF1;"
               >
                 Last Few Seats Left! Grab Your Seats Now
               </p>
@@ -1623,39 +1617,37 @@
             >
               <div class="mb-5">
                 <span class="lightwhite">Date &amp; Time</span>
-                <h2 class="mb-md-3 mb-3 datetime2 d-block">
+                <h2 class="mb-md-3 mb-3 datetime2 d-block" style="color: #66FCF1;">
                   Mar 31, 2025 8:00 PM
                 </h2>
-                <!-- <p class="mb-4">We have helped 50,000+ Traders achieve mind blowing trading results by helping
-                            them understand</p> -->
                 <div class="join-webinar">
                   <a
                     href="https://wa.link/zga4xa"
-                    class="d-inline-block green_btn btn-animation mb-2 geturl"
+                    class="d-inline-block btn-animation mb-2 geturl"
                     target="_blank"
+                    style="background: transparent; color: #fff; padding: 16px 32px; border-radius: 10px; font-weight: 700; border: 2px solid #66FCF1; transition: all 0.3s ease;"
+                    onmouseover="this.style.background='#66FCF1'; this.style.color='#000'; this.style.boxShadow='0 0 20px rgba(102, 252, 241, 0.4)'"
+                    onmouseout="this.style.background='transparent'; this.style.color='#fff'; this.style.boxShadow='none'"
                     >Sign Up Now!</a
                   >
-                  <span class="d-flex px-lg-4 font-18 justify-content-center"
+                  <span class="d-flex px-lg-4 font-18 justify-content-center" style="color: #45A29E;"
                     >(Seats Are Filling Very Fast)</span
                   >
                 </div>
               </div>
-              
             </div>
           </div>
         </div>
       </section>
-      
 
       <!--start-->
       <section class="upcoming_webinar overflow-hidden">
         <div class="container">
             <div class="head_wrap mb-lg-5 mb-4">
                 <div class="heading_dv text-center" data-aos="fade-up" data-aos-duration="1000">
-                      
-                    <h2 class="text-white mb-3">Catch The <span>Biggest Breakouts</span> Before Everyone Else
+                    <h2 class="text-white mb-3"><span style="color: #66FCF1;">Catch The</span> <span style="color: #45A29E;">Biggest Breakouts</span> Before Everyone Else
                     </h2>
-                    <p class="txt-white-70">In this webinar you will learn how to use institutional order flow techniques to catch the biggest<br> moves with the highest risk reward ratio, consistently in the markets.</p>
+                    <p style="color: #45A29E;">In this webinar you will learn how to use institutional order flow techniques to catch the biggest<br> moves with the highest risk reward ratio, consistently in the markets.</p>
                 </div> 
             </div> 
             <div class="row justify-content-around">
@@ -1663,31 +1655,39 @@
                     <div class="upcom_main position-relative text-center">
                         <div class="d-flex flex-column h-100 justify-content-between upcom_box">
                             <h2 class="mb-lg-3 mb-4">
-                                <span class="txt_upcom">Upcoming Webinar</span> 
+                                <span class="txt_upcom" style="color: #66fcf1 !important;">Upcoming Webinar</span> 
                             </h2>
                             <div class="">
                             <div class="dates text-center mb-lg-4">
-                                <span class="lightwhite">Date & Time (English)</span> 
-                                <h2 class="mb-4 datetime3"></h2> 
+                                <span class="lightwhite" style="color: #66fcf1 !important;">Date & Time (English)</span> 
+                                <h2 class="mb-4" style="color: #66fcf1 !important;">Mar 31, 2025 8:00 PM</h2>
                             </div>
                             
-                            <a href="#" class="geturl" target="_blank">
+                            <div class="webinar-details text-center mb-4">
+                                <p style="color: #66fcf1 !important; margin-bottom: 8px;">What You'll Learn:</p>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="color: #66fcf1 !important; margin-bottom: 8px; background: rgba(102, 252, 241, 0.1); padding: 8px; border-radius: 5px;">
+                                        • Professional Trading Strategies
+                                    </li>
+                                    <li style="color: #66fcf1 !important; margin-bottom: 8px; background: rgba(102, 252, 241, 0.1); padding: 8px; border-radius: 5px;">
+                                        • Risk Management Techniques
+                                    </li>
+                                    <li style="color: #66fcf1 !important; margin-bottom: 8px; background: rgba(102, 252, 241, 0.1); padding: 8px; border-radius: 5px;">
+                                        • Market Analysis Methods
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <a href="#" class="geturl" target="_blank" 
+                               style="background: transparent; color: #fff; padding: 16px 32px; border-radius: 10px; display: inline-block; font-weight: 700; border: 2px solid #66fcf1; transition: all 0.3s ease;"
+                               onmouseover="this.style.background='#66fcf1'; this.style.color='#000'; this.style.boxShadow='0 0 20px rgba(102, 252, 241, 0.4)'"
+                               onmouseout="this.style.background='transparent'; this.style.color='#fff'; this.style.boxShadow='none'">
                                  Buy Now
                             </a>
                             </div>
                             <div class="webinar-border">
                                 <span></span>
                             </div>
-                            <!-- <div class="webinar-hindi">
-                            <div class="dates text-center mb-lg-4">
-                                <span class="lightwhite">Date & Time (Hindi)</span> 
-                                <h2 class="mb-4 hindidatetime2"></h2> 
-                            </div>
-                            
-                            <a href="#" class="hindiurl btn-sky" target="_blank">
-                                 Buy Now
-                            </a>
-                            </div> -->
                         </div> 
                     </div>
                 </div>
@@ -1696,33 +1696,35 @@
                       <div class="upcom_box webinar_box">
                           <div class="d-flex flex-column h-100 justify-content-between">
                               <h2 class="mb-lg-5 mb-4 text-center">
-                                  <span class="txt_upcom">Webinar Bonuses</span> 
+                                  <span class="txt_upcom" style="color: #66fcf1;">Webinar Bonuses</span> 
                               </h2> 
                           
                               <div class="webinar-bonuses-container">
                                   <div class="webinar-free mb-3">
-                                      <img src="assets/images/icon/free-ebook.svg" alt="image">
-                                      <p class="mb-0 text"> <span class="highlight text-decoration-underline">Free</span>
+                                      <img src="assets/images/icon/free-ebook.svg" alt="image" style="filter: hue-rotate(140deg) brightness(1.2);">
+                                      <p class="mb-0 text" style="color: #45a29e;"> <span class="highlight text-decoration-underline" style="color: #66fcf1;">Free</span>
                                           E-book
                                       </p>
                                   </div>
                                   <div class="webinar-free mb-3">
-                                      <img src="assets/images/icon/gift.svg" alt="image">
-                                      <p class="mb-0 text">
-                                          Get <span class="highlight text-decoration-underline">50%</span> Discount 
+                                      <img src="assets/images/icon/gift.svg" alt="image" style="filter: hue-rotate(140deg) brightness(1.2);">
+                                      <p class="mb-0 text" style="color: #45a29e;">
+                                          Get <span class="highlight text-decoration-underline" style="color: #66fcf1;">50%</span> Discount 
                                       </p>
                                   </div>
                                   <div class="webinar-free mb-lg-4 mb-4">
-                                      <img src="assets/images/icon/call.svg" alt="image">
-                                      <p class="mb-0 text"> <span class="highlight text-decoration-underline">Free </span>
+                                      <img src="assets/images/icon/call.svg" alt="image" style="filter: hue-rotate(140deg) brightness(1.2);">
+                                      <p class="mb-0 text" style="color: #45a29e;"> <span class="highlight text-decoration-underline" style="color: #66fcf1;">Free </span>
                                            Consultation Call
                                       </p>
                                   </div>
                               </div>
               
                               <div class="webinar-buttons">
-                                  <a href="#" class="geturl mb-3" target="_blank">Join Webinar (English) At ₹199</a>
-                                  <!-- <a href="#" class="hindiurl btn-sky" target="_blank">Join Webinar (Hindi) At ₹199</a> -->
+                                  <a href="#" class="geturl mb-3" target="_blank" 
+                                     style="background: transparent; color: #fff; padding: 16px 32px; border-radius: 10px; display: inline-block; font-weight: 700; border: 2px solid #66fcf1; transition: all 0.3s ease;"
+                                     onmouseover="this.style.background='#66fcf1'; this.style.color='#000'; this.style.boxShadow='0 0 20px rgba(102, 252, 241, 0.4)'"
+                                     onmouseout="this.style.background='transparent'; this.style.color='#fff'; this.style.boxShadow='none'">Join Webinar (English) At ₹199</a>
                               </div>
                           </div>
                       </div>
@@ -1743,7 +1745,7 @@
           >
             <div class="heading_dv text-center">
               <h2 class="text-white">
-                You Should <span>Attend This Webinar If</span>
+                <span style="color: #66FCF1;">You Should</span> <span style="color: #45A29E;">Attend This Webinar If</span>
               </h2>
             </div>
           </div>
@@ -1755,21 +1757,23 @@
               data-aos="fade-right"
               data-aos-duration="1000"
             >
-              <div class="yoush_box">
+              <div class="yoush_box" style="border: 2px solid #66FCF1;">
                 <div class="yous_img">
                   <img
                     src="./assets/images/icon/money.png"
                     alt="money"
                     class="d-md-block d-none m-auto"
+                    style="filter: hue-rotate(140deg) brightness(1.2);"
                   />
                   <img
                     src="./assets/images/icon/money-hover.png"
                     alt="money-hover"
                     class="d-md-none d-block"
+                    style="filter: hue-rotate(140deg) brightness(1.2);"
                   />
                 </div>
                 <div class="ctn">
-                  <h3>You Want To Become A <span>Professional Trader</span></h3>
+                  <h3>You Want To Become A <span style="color: #66FCF1;">Professional Trader</span></h3>
                 </div>
               </div>
             </div>
@@ -1778,22 +1782,24 @@
               data-aos="fade-up"
               data-aos-duration="1000"
             >
-              <div class="yoush_box skyfilter h-100">
+              <div class="yoush_box skyfilter h-100" style="border: 2px solid #66FCF1;">
                 <div class="yous_img">
                   <img
                     src="./assets/images/icon/trading-chart.png"
                     alt="trading-chart"
                     class="d-md-block d-none m-auto"
+                    style="filter: hue-rotate(140deg) brightness(1.2);"
                   />
                   <img
                     src="./assets/images/icon/trading-chart-hover.png"
                     alt="trading-chart-hover"
                     class="d-md-none d-block"
+                    style="filter: hue-rotate(140deg) brightness(1.2);"
                   />
                 </div>
                 <div class="ctn">
                   <h3>
-                    You Want To Make <span>Consistent Profits</span> In The
+                    You Want To Make <span style="color: #66FCF1;">Consistent Profits</span> In The
                     Markets
                   </h3>
                 </div>
@@ -1804,22 +1810,24 @@
               data-aos="fade-left"
               data-aos-duration="1000"
             >
-              <div class="yoush_box parplefilter h-100">
+              <div class="yoush_box parplefilter h-100" style="border: 2px solid #66FCF1;">
                 <div class="yous_img">
                   <img
                     src="./assets/images/icon/growth.png"
                     alt="growth"
                     class="d-md-block d-none m-auto"
+                    style="filter: hue-rotate(140deg) brightness(1.2);"
                   />
                   <img
                     src="./assets/images/icon/growth-hover.png"
                     alt="growth-hover"
                     class="d-md-none d-block"
+                    style="filter: hue-rotate(140deg) brightness(1.2);"
                   />
                 </div>
                 <div class="ctn">
                   <h3>
-                    You Want To Start From The <span>Absolute Basics</span>
+                    You Want To Start From The <span style="color: #66FCF1;">Absolute Basics</span>
                   </h3>
                 </div>
               </div>
@@ -1892,59 +1900,123 @@
             data-aos="fade-up"
             data-aos-duration="1000"
           >
-            <h2 class="font-60 mb-60">Your <span>Coach</span></h2>
+            <h2 class="font-60 mb-60">Your <span style="color: #66FCF1;">Coach</span></h2>
           </div>
-          <div class="coach-row banner_crd_brder d-lg-flex align-items-end">
+          <div class="coach-row banner_crd_brder d-lg-flex align-items-end" style="border: 2px solid #66FCF1;">
             <div
               class="text-lg-start text-center"
               data-aos="fade-right"
               data-aos-duration="1000"
             >
-              <div class="cach-card">
-                <div class="video-container player-container position-relative" style="border-radius: 20px; overflow: hidden;">
-                  <video width="100%" height="auto" autoplay muted loop>
+              <!-- Desktop View (Above 768px) -->
+              <div class="cach-card d-none d-md-block" data-aos="fade-up" data-aos-duration="1000">
+                <div class="video-container player-container position-relative" 
+                     style="border-radius: 20px; overflow: hidden; box-shadow: 0 0 20px rgba(102, 252, 241, 0.2);">
+                  <video width="100%" height="auto" autoplay muted loop playsinline>
                     <source src="assets/videos/havenark_video_1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
-                </video>
+                  </video>
                 </div>
-                <h3>Ritvik</h3>
-                <span class="txt-white-60"
-                  >(....| MBA |.... )</span
-                >
-                <div class="coach-ctn txt-white-50">
-                  <p>
-                    Hello Everyone! I am , Chairman &amp; Managing
-                    Director at HavenArk.
-                  </p>
-                  <p>
-                    I Am A Full Time Trader, Investor, Mentor &amp; Have Trained
-                    50K+ Traders, The Art &amp; Science of Professional Trading.
+
+                <div class="coach-info text-center mt-4" data-aos="fade-up" data-aos-delay="200">
+                  <h3 class="coach-name mb-2" 
+                      style="color: #66FCF1; font-size: 2.5rem; font-weight: 700; 
+                             text-shadow: 0 0 10px rgba(102, 252, 241, 0.3);">
+                    Ritvik Vipin Kumar
+                  </h3>
+
+                  <div class="coach-credentials mb-4"
+                       style="color: #45A29E; font-size: 1.2rem; letter-spacing: 2px;">
+                    <span class="credential-item">MBA</span>
+                    <span class="mx-2">|</span>
+                    <span class="credential-item">Professional Trader</span>
+                  </div>
+
+                  <div class="coach-bio" 
+                       style="color: #45A29E; max-width: 800px; margin: 0 auto;
+                              line-height: 1.8; font-size: 1.1rem;">
+                    <p class="mb-3">
+                      Hello Everyone! I am the Chairman &amp; Managing Director at HavenArk.
+                    </p>
+                    <p>
+                      I Am A Full Time Trader, Investor, Mentor &amp; Have Trained
+                      50K+ Traders in The Art &amp; Science of Professional Trading.
+                      My Mission is to Educate, Train, Fund &amp; Help Traders.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Simplified Mobile View (Below 768px) -->
+              <div class="cach-card-mobile d-block d-md-none">
+                <div class="mobile-video-container mb-4">
+                  <video width="100%" height="auto" autoplay muted loop playsinline 
+                         style="border-radius: 10px;">
+                    <source src="assets/videos/havenark_video_1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+
+                <div class="mobile-content px-3">
+                  <h3 style="color: #66FCF1; 
+                            font-size: 1.8rem; 
+                            margin-bottom: 10px;
+                            text-align: center;">
+                    Ritvik
+                  </h3>
+
+                  <div style="text-align: center;
+                            color: #45A29E;
+                            margin-bottom: 20px;
+                            font-size: 1rem;">
+                    MBA | Professional Trader
+                  </div>
+
+                  <div style="color: #45A29E;
+                            background: rgba(102, 252, 241, 0.05);
+                            padding: 15px;
+                            border-radius: 10px;
+                            margin-bottom: 15px;
+                            font-size: 0.95rem;
+                            line-height: 1.6;">
+                    <p class="mb-3">
+                      Hello Everyone! I am the Chairman &amp; Managing Director at HavenArk.
+                    </p>
+                    <p class="mb-0">
+                      I Am A Full Time Trader, Investor, Mentor &amp; Have Trained
+                      50K+ Traders in The Art &amp; Science of Professional Trading.
+                    </p>
+                  </div>
+
+                  <div style="text-align: center;
+                            color: #66FCF1;
+                            font-weight: 500;
+                            padding: 10px;
+                            font-size: 0.95rem;">
                     My Mission is to Educate, Train, Fund &amp; Help Traders.
-                  </p>
-                </div>
-                <!-- <div class="seb_card sebi_card_img d-flex align-items-center">
-                  <div class="sebi-img">
-                    <img
-                      src="./assets/images/icon/ic_sharp-verified-green.svg"
-                      alt="ic_sharp-verified"
-                    />
-                  </div>
-                  <div class="sebi-ctn">
-                    <span>SEBI Registered Research Analyst</span>
-                    <h3></h3> -->
                   </div>
                 </div>
               </div>
+
+              <style>
+                @media (max-width: 768px) {
+                  .mobile-content {
+                    max-width: 100%;
+                    margin: 0 auto;
+                  }
+                  
+                  .mobile-video-container {
+                    margin: 0 -15px;
+                  }
+                  
+                  .mobile-video-container video {
+                    width: 100%;
+                    display: block;
+                  }
+                }
+              </style>
             </div>
-            <!-- <div
-              class="coach-right text-center"
-              data-aos="fade-in"
-              data-aos-duration="2000"
-            >
-              <div class="d-lg-block d-none">
-                <img src="./assets/images/banner-top.png" alt="banner-top" />
-              </div>
-            </div> -->
+            
           </div>
         </div>
       </section>
@@ -1954,39 +2026,45 @@
       <section class="testimonial-sec">
         <div class="container">
             <div class="heading_dv title-shadow text-center mb-lg-5 mb-4" data-aos="fade-up" data-aos-duration="1000">
-                <h2 class="font-60 px-3">Hear It From <span>Our Students</span></h2>
+                <h2 class="font-60 px-3">Hear It From <span class="student-highlight">Our Students</span></h2>
+                <style>
+                    .student-highlight {
+                        color: #66fcf1 !important;
+                        text-shadow: 0 0 10px rgba(102, 252, 241, 0.2);
+                    }
+                </style>
             </div>
         </div>
         <div class="testi_wrap">
             <div class="testi-single d-xl-flex align-items-center">
-                <img src="assets/images/feedback/user1.png" alt="user1">
+                <img src="assets/images/icon/dp1.png" alt="user1" style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid #66FCF1; object-fit: cover;">
                 <div class="testi-ctn ms-xl-4">
-                    <h3>Rahul, Corporate Lawyer</h3>
-                    <span>"A Complete Paradigm Shift in How I View Trading"</span>
-                    <p>The institutional trading concepts taught here completely transformed my approach. Coming from a background of retail trading strategies, learning how markets actually function was eye-opening. The professional techniques shared have given me a significant edge. Immensely grateful to Team HavenArk for this invaluable knowledge.</p>
+                    <h3 style="color: #66FCF1;">Aditya, Software Engineer</h3>
+                    <span style="color: #45A29E;">"Finally Found What Was Missing in My Trading Journey"</span>
+                    <p>The depth of knowledge shared in this program filled crucial gaps in my understanding. After years of struggling with conventional trading methods, these institutional concepts provided the missing pieces. The systematic approach and professional strategies have dramatically improved my trading results. Cannot thank the HavenArk team enough for this game-changing education.</p>
                 </div>
             </div>
             <div class="testi-single d-xl-flex align-items-center">
-                <img src="assets/images/feedback/user2.png" alt="user1">
+                <img src="assets/images/icon/dp1.png" alt="user2" style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid #66FCF1; object-fit: cover;">
                 <div class="testi-ctn ms-xl-4">
-                    <h3>Raju Bhai, VIT</h3>
-                    <span>"Mind Blowing! This Was The Best Trading Webinar I Have Ever Attended."</span>
+                    <h3 style="color: #66FCF1;">Vikram, Data Scientist</h3>
+                    <span style="color: #45A29E;">"Mind Blowing! This Was The Best Trading Webinar I Have Ever Attended."</span>
                     <p>Well I was blown with the way you explained things. What a perspective about trading and investing. The way you explain things shows the kind of time and energy you have spent in trading. I really was vibing with you man. Absolutely loved the Webinar. Kudos!</p>
                 </div>
             </div>
             <div class="testi-single d-xl-flex align-items-center">
-                <img src="assets/images/feedback/user3.png" alt="user1">
+                <img src="assets/images/icon/dp1.png" alt="user3" style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid #66FCF1; object-fit: cover;">
                 <div class="testi-ctn ms-xl-4">
-                    <h3>Prashi, Infosys</h3>
-                    <span>"This Workshop Transformed My Approach to Trading"</span>
+                    <h3 style="color: #66FCF1;">Neha, Product Manager</h3>
+                    <span style="color: #45A29E;">"This Workshop Transformed My Approach to Trading"</span>
                     <p>I cannot express enough gratitude to Ritvik and the incredible team at HavenArk. Before joining their program, my understanding of the markets was based on fragmented knowledge from YouTube videos. However, HavenArk provided me with a monumental reality check that completely transformed my approach to trading.</p>
                 </div>
             </div>
             <div class="testi-single d-xl-flex align-items-center">
-                <img src="assets/images/feedback/user4.png" alt="user1">
+                <img src="assets/images/icon/dp1.png" alt="user4" style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid #66FCF1; object-fit: cover;">
                 <div class="testi-ctn ms-xl-4">
-                    <h3>Keerti, Business Owner</h3>
-                    <span>"This program changed my entire trading perspective!"</span>
+                    <h3 style="color: #66FCF1;">Rohan, Startup Founder</h3>
+                    <span style="color: #45A29E;">"This program changed my entire trading perspective!"</span>
                     <p>Coming from a business background, I was skeptical about trading at first. But after attending this webinar, I gained incredible clarity about institutional trading concepts. The live market examples and practical approach helped me understand complex concepts easily. Ritvik's teaching style and transparency is commendable. This is exactly what I needed to start my trading journey!</p>
                 </div>
             </div>
@@ -2009,8 +2087,8 @@
                 data-aos="fade-up"
                 data-aos-duration="1000"
               >
-                <h2 class="text-white">Time Is <span>Ticking</span></h2>
-                <p class="txt-white-60 font-18">
+                <h2 class="text-white">Time Is <span style="color: #66FCF1;">Ticking</span></h2>
+                <p style="color: #45A29E;" class="font-18">
                   Don't miss out on something truly exceptional!
                 </p>
               </div>
@@ -2022,16 +2100,36 @@
               data-aos="fade-up"
               data-aos-duration="1000"
             >
-              <span id="time_ticking">04 : 44</span>
+              <span id="time_ticking" style="color: #66FCF1; text-shadow: 0 0 15px rgba(102, 252, 241, 0.4);">04 : 44</span>
             </div>
 
             <p
               class="last-seats-tag mb-md-5 mb-4"
               data-aos="fade-up"
               data-aos-duration="1000"
+              style="color: #66FCF1; font-size: clamp(1rem, 2.5vw, 1.2em); font-weight: bold; text-shadow: 0 0 10px rgba(102, 252, 241, 0.4); animation: pulse 2s infinite; margin: 20px auto; max-width: 90%;"
             >
               Last Few Seats Left! Grab Your Seats Now
             </p>
+
+            <style>
+              @keyframes pulse {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.03); text-shadow: 0 0 20px rgba(102, 252, 241, 0.8); }
+                100% { transform: scale(1); }
+              }
+
+              @media (max-width: 768px) {
+                .last-seats-tag {
+                  font-size: 1rem !important;
+                  margin: 15px auto !important;
+                }
+                .green_btn {
+                  padding: 10px 20px !important;
+                  font-size: 0.9rem !important;
+                }
+              }
+            </style>
 
             <div
               class="text-center"
@@ -2043,14 +2141,24 @@
                   href="https://wa.link/zga4xa"
                   class="green_btn btn-animation px-5 geturl"
                   target="_blank"
+                  style="background: transparent; color: #fff; border: 2px solid #66FCF1; padding: clamp(10px, 2vw, 12px) clamp(20px, 4vw, 30px); border-radius: 8px; font-weight: bold; transition: all 0.3s ease; display: inline-block; margin: 10px auto; text-decoration: none;"
+                  onmouseover="this.style.background='#66FCF1'; this.style.color='#000'; this.style.boxShadow='0 0 20px rgba(102, 252, 241, 0.4)'; this.style.transform='translateY(-2px)';"
+                  onmouseout="this.style.background='transparent'; this.style.color='#fff'; this.style.boxShadow='none'; this.style.transform='translateY(0)';"
                   >Sign Up For English</a
                 >
-                
               </div>
-              <p class="font-14 mb-2">
-                (Offer expires in 10 minutes, Hurry Up!)
+              <p class="font-14 mb-2" style="color: #66FCF1; animation: blink 1.5s infinite; font-size: clamp(0.8rem, 2vw, 0.9rem);">
+                (Offer expires soon, Hurry Up!)
               </p>
             </div>
+
+            <style>
+              @keyframes blink {
+                0% { opacity: 1; }
+                50% { opacity: 0.5; }
+                100% { opacity: 1; }
+              }
+            </style>
           </div>
         </div>
       </section>
@@ -2066,187 +2174,237 @@
           >
             <div class="heading_dv text-center">
               <h2 class="text-white">
-                Frequently Asked <span>Questions</span>
+                Frequently Asked <span class="gradient-text">Questions</span>
               </h2>
             </div>
           </div>
-          <h2 class="mb-4"></h2>
-          <div class="accordion custom-acc" id="accordionExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button
-                  class="accordion-button"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseOne"
-                  aria-expanded="true"
-                  aria-controls="collapseOne"
-                >
-                  What will be the duration of the webinar?
-                </button>
-              </h2>
-              <div
-                id="collapseOne"
-                class="accordion-collapse collapse show"
-                aria-labelledby="headingOne"
-                data-bs-parent="#accordionExample"
-              >
-                <div class="accordion-body">
-                  <p class="txt-white-70">
-                    The duration of the webinar will be 120 minutes (2 hours).
-                  </p>
-                </div>
+
+          <div class="faq-container">
+            <div class="faq-item" data-aos="fade-up" data-aos-duration="800">
+              <div class="faq-question">
+                <span class="faq-icon">
+                  <i class="fas fa-plus"></i>
+                </span>
+                <h3>What will be the duration of the webinar?</h3>
+              </div>
+              <div class="faq-answer">
+                <p>The duration of the webinar will be 120 minutes (2 hours).</p>
               </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseTwo"
-                  aria-expanded="false"
-                  aria-controls="collapseTwo"
-                >
-                  What will be the language of the webinar ?
-                </button>
-              </h2>
-              <div
-                id="collapseTwo"
-                class="accordion-collapse collapse"
-                aria-labelledby="headingTwo"
-                data-bs-parent="#accordionExample"
-              >
-                <div class="accordion-body">
-                  <p class="txt-white-70">
-                    The webinar will be delivered in English. You
-                    can ask any doubt in English.
-                  </p>
-                </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+              <div class="faq-question">
+                <span class="faq-icon">
+                  <i class="fas fa-plus"></i>
+                </span>
+                <h3>What will be the language of the webinar?</h3>
+              </div>
+              <div class="faq-answer">
+                <p>The webinar will be delivered in English. You can ask any doubt in English.</p>
               </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseThree"
-                  aria-expanded="false"
-                  aria-controls="collapseThree"
-                >
-                  Will we get the recordings of this webinar ?
-                </button>
-              </h2>
-              <div
-                id="collapseThree"
-                class="accordion-collapse collapse"
-                aria-labelledby="headingThree"
-                data-bs-parent="#accordionExample"
-              >
-                <div class="accordion-body">
-                  <p class="txt-white-70">
-                    Yes, by attending the webinar, you will gain access to a
-                    replay option, allowing you to watch the content as many
-                    times as you wish.
-                  </p>
-                </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+              <div class="faq-question">
+                <span class="faq-icon">
+                  <i class="fas fa-plus"></i>
+                </span>
+                <h3>Will we get the recordings of this webinar?</h3>
+              </div>
+              <div class="faq-answer">
+                <p>Yes, by attending the webinar, you will gain access to a replay option, allowing you to watch the content as many times as you wish.</p>
               </div>
             </div>
           </div>
-          <div
-            class="row justify-content-center"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-          >
+
+          <div class="row justify-content-center mt-5">
             <div class="col-lg-8 text-center">
-              <div class="timeline-details mt-lg-4 mt-4">
-                <p class="mb-0 text-light datetime1">Mar 31, 2025 8:00 PM</p>
-                <div class="sign-btn mt-0 ms-lg-5">
-                  <a
-                    href="https://wa.link/zga4xa"
-                    class="hero-signup d-block btn-animation geturl"
-                    target="_blank"
-                    >English Webinar At ₹199</a
-                  >
+              <div class="timeline-card">
+                <p class="mb-0 timeline-date">Mar 31, 2025 8:00 PM</p>
+                <div class="sign-btn mt-3">
+                  <a href="https://wa.link/zga4xa" class="cta-button geturl" target="_blank" 
+                     style="background: transparent; color: #fff; padding: 15px 40px; border-radius: 30px; font-weight: bold; text-decoration: none; display: inline-block; transition: all 0.3s ease; border: 2px solid #66FCF1;"
+                     onmouseover="this.style.background='#66FCF1'; this.style.color='#000'; this.style.boxShadow='0 0 20px rgba(102, 252, 241, 0.4)'"
+                     onmouseout="this.style.background='transparent'; this.style.color='#fff'; this.style.boxShadow='none'">
+                    English Webinar At ₹199
+                  </a>
                 </div>
               </div>
-              
             </div>
           </div>
         </div>
+
+        <style>
+          .gradient-text {
+            background: linear-gradient(45deg, #66FCF1, #45A29E);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+          }
+
+          .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+          }
+
+          .faq-item {
+            background: rgba(102, 252, 241, 0.05);
+            border: 1px solid rgba(102, 252, 241, 0.2);
+            border-radius: 15px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+          }
+
+          .faq-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 252, 241, 0.1);
+          }
+
+          .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+          }
+
+          .faq-question h3 {
+            color: #66FCF1;
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 500;
+          }
+
+          .faq-icon {
+            background: rgba(102, 252, 241, 0.1);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+          }
+
+          .faq-icon i {
+            color: #66FCF1;
+            font-size: 12px;
+            transition: all 0.3s ease;
+          }
+
+          .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+          }
+
+          .faq-answer p {
+            color: #45A29E;
+            padding: 0 20px 20px 65px;
+            margin: 0;
+            line-height: 1.6;
+          }
+
+          .faq-item.active .faq-icon {
+            background: #66FCF1;
+          }
+
+          .faq-item.active .faq-icon i {
+            color: #000;
+            transform: rotate(45deg);
+          }
+
+          .faq-item.active .faq-answer {
+            max-height: 300px;
+          }
+
+          .timeline-card {
+            background: rgba(102, 252, 241, 0.1);
+            border: 2px solid #66FCF1;
+            border-radius: 15px;
+            padding: 30px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 10px 30px rgba(102, 252, 241, 0.1);
+            transition: all 0.3s ease;
+          }
+
+          .timeline-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(102, 252, 241, 0.2);
+          }
+
+          .timeline-date {
+            color: #66FCF1;
+            font-size: 1.4em;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(102, 252, 241, 0.3);
+          }
+
+          @media (max-width: 768px) {
+            .faq-question h3 {
+              font-size: 1rem;
+            }
+            
+            .timeline-card {
+              padding: 20px;
+            }
+            
+            .timeline-date {
+              font-size: 1.2em;
+            }
+            
+            .cta-button {
+              padding: 12px 30px;
+            }
+          }
+        </style>
+
+        <script>
+          document.querySelectorAll('.faq-item').forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', () => {
+              item.classList.toggle('active');
+            });
+          });
+        </script>
       </section>
-      <footer class="footer">
+      <footer class="footer py-5" style="background: rgba(102, 252, 241, 0.05); border-top: 1px solid rgba(102, 252, 241, 0.1);">
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-12">
-              <div class="footer-div">
-                <div class="logo">
-                  <img src="assets/images/DP.png" alt="logo" />
-                </div>
-                <p class="logo-text">HavenArk</p>
-                <div class="text-center">
-                  <p class="follow-text">FOLLOW US ON :</p>
-                  <div class="justify-content-center d-flex gap-4">
-                    <a href="https://wa.me/918949800532" target="_blank"
-                      ><img
-                        src="assets/images/icon/whatsapp.svg"
-                        class="follow-icon"
-                        alt="icon"
-                    /></a>
-                    <a
-                      href="https://www.instagram.com/haven_ark/"
-                      target="_blank"
-                      ><img
-                        src="assets/images/icon/instagram.svg"
-                        class="follow-icon"
-                        alt="icon"
-                    /></a>
-                  </div>
-                </div>
-                <div class="footer-disclaimer">
-                  <h5>*Disclaimer</h5>
-                  <p>
-                    Our Training Programs provide comprehensive education on technical analysis 
-                    and market psychology through real-world examples and live market cases. 
-                    While we strive to deliver high-quality educational content, please note 
-                    that all information and materials are for educational purposes only. 
-                    Nothing presented constitutes financial advice or recommendations to buy, 
-                    sell or trade securities. Stock trading carries substantial risks - past 
-                    performance does not predict future results. Examples discussed in webinars 
-                    are purely for illustration. No returns are guaranteed. Registration with 
-                    SEBI, BASL membership (for Investment Advisors) and NISM certification do 
-                    not guarantee advisor performance or investor returns. Participants must 
-                    conduct their own research and due diligence before making any investment 
-                    decisions.
-                  </p>
-                </div>
+            <div class="col-lg-8 text-center mb-4">
+              <div class="d-flex align-items-center justify-content-center mb-3">
+                <img src="assets/images/DP.png" alt="HavenArk Logo" style="height: 40px; width: auto; margin-right: 10px;">
+                <h3 class="m-0" style="color: #66FCF1; font-weight: 600;">HavenArk</h3>
               </div>
-              <div class="copyright-div" style="max-width: 996px; margin: auto">
-                <p class="text-center txt-white-70 font-14 mb-1">
-                  ©2025 HavenArk. All rights reserved.
-                </p>
-                <p class="text-center txt-white-70 font-12">
-                  This site is not a part of the Meta™ Inc. Additionally, this
-                  site is not endorsed by Meta™ in any way. All content provided
-                  on this page is for informational and promotional purposes
-                  only. Results may vary and are not guaranteed. Please review
-                  our
-                  <a
-                    href="#"
-                    target="_blank"
-                    >Privacy Policy</a
-                  >
-                  and
-                  <a
-                    href="#"
-                    target="_blank"
-                    >Terms of Service</a
-                  >
-                  before proceeding.
+              
+              <div class="social-links mb-4">
+                <p class="text-muted mb-3" style="color: #45A29E !important;">Connect With Us</p>
+                <a href="https://wa.me/918949800532" target="_blank" class="mx-2" style="color: #66FCF1;">
+                  <img src="assets/images/icon/whatsapp.svg" alt="WhatsApp" style="height: 24px; width: 24px; transition: transform 0.3s ease;">
+                </a>
+                <a href="https://www.instagram.com/haven_ark/" target="_blank" class="mx-2" style="color: #66FCF1;">
+                  <img src="assets/images/icon/instagram.svg" alt="Instagram" style="height: 24px; width: 24px; transition: transform 0.3s ease;">
+                </a>
+              </div>
+
+              <div class="disclaimer mb-4 px-3" style="color: #45A29E; font-size: 0.9rem; line-height: 1.6;">
+                <h6 style="color: #66FCF1; font-size: 1rem; margin-bottom: 10px;">Disclaimer</h6>
+                <p style="text-align: justify;">
+                  Our Training Programs provide educational content on technical analysis and market psychology through real-world examples. All information is for educational purposes only and does not constitute financial advice. Trading carries risks - past performance doesn't guarantee future results. Examples are for illustration only. No returns are guaranteed. Conduct your own research before making investment decisions.
                 </p>
               </div>
             </div>
+          </div>
+
+          <div class="copyright text-center pt-3" style="border-top: 1px solid rgba(102, 252, 241, 0.1);">
+            <p class="mb-2" style="color: #45A29E; font-size: 0.9rem;">
+              ©2025 HavenArk. All rights reserved.
+            </p>
+            <p style="color: #45A29E; font-size: 0.8rem;">
+              Not affiliated with Meta™ Inc. For informational purposes only. 
+              <a href="#" style="color: #66FCF1; text-decoration: none;">Privacy Policy</a> • 
+              <a href="#" style="color: #66FCF1; text-decoration: none;">Terms of Service</a>
+            </p>
           </div>
         </div>
       </footer>
@@ -2527,7 +2685,7 @@
       style="display: none; visibility: hidden"
     ></iframe>
     <div id="whatsapp-chat-widget">
-      <div class="wa-widget-send-button">
+      <!-- <div class="wa-widget-send-button">
         <svg
           id="wa-widget-svg"
           width="28"
@@ -2567,7 +2725,7 @@
             stroke-linecap="square"
           ></path>
         </svg>
-      </div>
+      </div> -->
       <!-- <div class="wa-chat-bubble">
         <div class="wa-chat-bubble-close-button">
           <svg
@@ -2587,7 +2745,7 @@
         </div>
         <div class="wa-chat-bubble-text">Chat With Us</div>
       </div> -->
-      <div class="wa-chat-box">
+      <!-- <div class="wa-chat-box">
         <img
           class="wa-chat-box-brand"
           onerror='this.src= "https://cdn.clare.ai/wati/images/WATI_logo_square_2.png";'
@@ -2626,7 +2784,7 @@
           </svg>
           <div class="wa-chat-box-content-send-btn-text">Chat With Us</div>
         </a>
-      </div>
+      </div> -->
     </div>
   </body>
 </html>
