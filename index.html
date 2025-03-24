@@ -474,25 +474,26 @@
       </div>
       <header>
         <nav
-          class="navbar resp_menu_sec navbar-expand-lg navbar-light bg-light custom-bg-gradient"
+          class="navbar resp_menu_sec navbar-expand-lg navbar-light bg-light"
+          style="background: rgba(26, 26, 26, 0.95) !important; backdrop-filter: blur(10px); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); border-bottom: 1px solid rgba(102, 252, 241, 0.1);"
         >
           <div class="container">
             <a class="navbar-brand" href="index.html"
-              ><img src="assets/images/256.png" alt="image logo" style="height: auto; width: 20%;"
+              ><img src="assets/images/256.png" alt="image logo" style="height: auto; width: 20%; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"
             /></a>
             <div class="resp_menu d-flex align-items-center">
               <a
                 href="https://wa.me/"
                 class="online-icon d-lg-none d-block p-0 me-lg-2 me-1"
+                style="transition: all 0.3s ease;"
+                onmouseover="this.style.transform='scale(1.1) rotate(10deg)'"
+                onmouseout="this.style.transform='scale(1) rotate(0)'"
                 ><img src="./assets/images/whatsapp.png" alt="whatsapp image"
               /></a>
-              <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                        </button> -->
-              <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+              <div class="hamburger" style="cursor: pointer; transition: all 0.3s ease;">
+                <span style="background: #66FCF1; height: 2px; margin: 6px 0; transition: all 0.3s ease;"></span>
+                <span style="background: #66FCF1; height: 2px; margin: 6px 0; transition: all 0.3s ease;"></span>
+                <span style="background: #66FCF1; height: 2px; margin: 6px 0; transition: all 0.3s ease;"></span>
               </div>
             </div>
             <div
@@ -501,15 +502,22 @@
             >
               <ul class="navbar-nav m-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link highlight-sv" style="color: #66FCF1" aria-current="page" href="#"
-                    >Webinar</a
-                  >
+                  <a class="nav-link" style="color: #66FCF1; transition: all 0.3s ease; font-weight: 500; padding: 12px 20px; border-radius: 8px; position: relative;" 
+                     onmouseover="this.style.background='rgba(102, 252, 241, 0.1)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 15px rgba(102, 252, 241, 0.2)'"
+                     onmouseout="this.style.background='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'"
+                     href="https://www.havenark.in/havenspire-community" target="_blank">Community</a>
                 </li>
-                <!-- <li class="nav-item">
-                                <a class="nav-link" href="on-demand-webinar.html">On-Demand Webinar</a>
-                            </li> -->
                 <li class="nav-item">
-                  <a class="nav-link" style="color: #66FCF1" href="https://wa.link/zga4xa" target="_blank">Contact Us</a>
+                  <a class="nav-link" style="color: #66FCF1; transition: all 0.3s ease; font-weight: 500; padding: 12px 20px; border-radius: 8px; position: relative;"
+                     onmouseover="this.style.background='rgba(102, 252, 241, 0.1)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 15px rgba(102, 252, 241, 0.2)'"
+                     onmouseout="this.style.background='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'"
+                     href="https://www.havenark.in/modules" target="_blank">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" style="color: #66FCF1; transition: all 0.3s ease; font-weight: 500; padding: 12px 20px; border-radius: 8px; position: relative;"
+                     onmouseover="this.style.background='rgba(102, 252, 241, 0.1)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 15px rgba(102, 252, 241, 0.2)'"
+                     onmouseout="this.style.background='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'"
+                     href="https://www.havenark.in/contact" target="_blank">Contact Us</a>
                 </li>
               </ul>
               <form class="d-flex add-to-cart">
@@ -517,50 +525,25 @@
                   href="https://wa.link/zga4xa"
                   class="online-icon d-lg-block d-none"
                   target="_blank"
+                  style="transition: all 0.3s ease; position: relative;"
+                  onmouseover="this.style.transform='scale(1.1) rotate(10deg)'; this.style.filter='drop-shadow(0 0 10px rgba(102, 252, 241, 0.5))'"
+                  onmouseout="this.style.transform='scale(1) rotate(0)'; this.style.filter='none'"
                   ><img src="./assets/images/whatsapp.png" alt="whatsapp image"
                 /></a>
-                
               </form>
             </div>
           </div>
         </nav>
       </header>
 
-      <!--start-Live-Webinar-->
-      <!-- <section class="hero-banner-dv">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-xl-6 col-lg-6"> 
-                        <div class="banner-caption text-md-start text-center">
-
-                            <h1 id="mainHeading" class="d-md-none d-inline-block">
-                            Learn Institutional<br>
-                                <div class=" resp-animate d-inline-block">
-                                    <span>Order Flow</span>
-                                    <span>Smart Money</span>
-                                    <span>Volatility</span>
-                                    <span>Breakout</span>
-                                </div>
-                                <span class="d-block bg-head-ellipse">Like The Banks</span>
-                            </h1>
-
-                            <h1 class="d-md-block d-none">Learn Institutional Trading & Trade Like The Banks</h1>
-                            <span class="mt-3">Catch The Breakouts Before Everyone Else.</span>
-                            <div class="sign-btn">
-                                <a href="#" class="hero-signup btn-animation geturl" target="_blank">Sign Up Now!</a>
-                            </div>
-                        </div> 
-                    </div>
-                </div>
-            </div>
-            <div class="responsive_banner d-lg-none d-block">
-                <img src="./assets/images/banner/responsive_banner.png">
-            </div>
-        </section> -->
+      
       <section
         class="hero-banner-dv on-demand-dv"
-        style="background-image: url(./assets/images/banner/banner-grid.png)"
+        style="position: relative; overflow: hidden; background-color: rgba(0,0,0,0.5);"
       >
+        <video autoplay muted loop playsinline style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; transform: translate(-50%, -50%); object-fit: cover; z-index: -1; opacity: 0.7;">
+          <source src="./assets/videos/Color.mp4" type="video/mp4">
+        </video>
         <div class="container">
           <div class="stock-icon-wrp">
             <div class="stock-icon wowWrap">
@@ -662,7 +645,8 @@
                     class="img-fluid zoomed-image">
                   <div class="profile-card d-flex align-items-center justify-content-center p-3 glow-animation"
                     style="background: rgba(255,255,255,0.1); border-radius: 12px; backdrop-filter: blur(5px); width: fit-content; margin: 1rem auto;">
-                    <div class="profile-content text-center">
+                    <img src="./assets/images/256.png" alt="logo" style="width: 40px; height: 40px; margin-right: 10px;"/>
+                    <div class="profile-content text-center" style="width: 250px;">
                       <h3 class="animated-name" style="font-size: clamp(1rem, 2.5vw, 1.5rem); margin: 0;">Akash Jayan</h3>
                     </div>
                   </div>
@@ -670,7 +654,7 @@
             </div>
             <div class="col-xl-6 col-lg-6 mb-lg-0 mb-4">
               <div class="banner-caption text-center">
-                <div class="">
+                <div class="" style="background: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px;">
                   <h1 id="mainHeading" class="d-md-block d-none" style="background: linear-gradient(45deg, #66FCF1, #45A29E); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
                     India's Largest 
                     <div class="ondem_ban_text d-inline fw-bolder">
@@ -707,12 +691,12 @@
                 </div>
                 <div class="sign-btn">
                   <a
-                    href="https://wa.link/zga4xa"
+                    href="https://pages.razorpay.com/bootcamp2197"
                     id="cta-2"
                     class="hero-signup btn-animation geturl mb-4 outline-button"
                     target="_blank"
                     style="color: #fff !important;"
-                    >Join Now (English) At ₹199</a
+                    >Join Now At ₹199</a
                   >
                 </div>
               </div>
@@ -722,8 +706,9 @@
                 <img src="./assets/images/ritvik.png" alt="banner-right" 
                   class="img-fluid zoomed-image"/>
                 <div class="profile-card d-flex align-items-center justify-content-center p-3 glow-animation"
-                  style="background: rgba(255,255,255,0.1); border-radius: 12px; backdrop-filter: blur(5px); width: fit-content; margin: 1rem auto;">
-                  <div class="profile-content text-center">
+                  style="background: rgba(255,255,255,0.1); border-radius: 12px; backdrop-filter: blur(5px); margin: 1rem auto;">
+                  <img src="./assets/images/256.png" alt="logo" style="width: 40px; height: 40px; margin-right: 10px;"/>
+                  <div class="profile-content text-center" style="width: 250px;">
                     <h3 class="animated-name" style="font-size: clamp(1rem, 2.5vw, 1.5rem); margin: 0;">Ritvik Vipin Kumar</h3>
                   </div>
                 </div>
@@ -806,7 +791,7 @@
           </style>
         </div>
         
-        <div class="stock-topic d-lg-block d-none">
+        <div class="stock-topic d-lg-block d-none" style="background: rgba(0,0,0,0.5);">
           <div
             class="tradingview-widget-container"
             style="width: 120%; height: 72px;"
@@ -979,7 +964,7 @@
                     class="hero-signup btn-animation geturl aos-init"
                     target="_blank"
                     style="background: linear-gradient(180deg, #66FCF1 0, #45A29E 100%); box-shadow: 0 0 30px 1px rgba(102, 252, 241, 0.4);"
-                    >English Webinar At ₹199</a
+                    >Join Webinar At ₹199</a
                   >
                 </div>
               </div>
@@ -1427,10 +1412,10 @@
             <!-- Call-To-Action Button -->
             <div class="text-center" data-aos="fade-up" data-aos-duration="1000">
                 <div class="check-btn-m">
-                    <a href="#" class="d-inline-block green_btn mb-2 geturl" target="_blank" 
+                    <a href="https://pages.razorpay.com/bootcamp2197" class="d-inline-block green_btn mb-2 geturl" target="_blank" 
                        style="background: transparent; color: #fff; border: 2px solid #66FCF1; transition: all 0.3s ease;"
                        onmouseover="this.style.background='#66FCF1'; this.style.color='#000'; this.style.boxShadow='0 0 20px rgba(102, 252, 241, 0.4)'"
-                       onmouseout="this.style.background='transparent'; this.style.color='#fff'; this.style.boxShadow='none'">Join Now (English) At ₹199</a>
+                       onmouseout="this.style.background='transparent'; this.style.color='#fff'; this.style.boxShadow='none'">Join Now At Just ₹199</a>
                 </div>
                 <span class="d-block">(9+ Years Of Trading Experience)</span>
             </div>
@@ -1622,7 +1607,7 @@
                 </h2>
                 <div class="join-webinar">
                   <a
-                    href="https://wa.link/zga4xa"
+                    href="https://pages.razorpay.com/bootcamp2197"
                     class="d-inline-block btn-animation mb-2 geturl"
                     target="_blank"
                     style="background: transparent; color: #fff; padding: 16px 32px; border-radius: 10px; font-weight: 700; border: 2px solid #66FCF1; transition: all 0.3s ease;"
@@ -1659,7 +1644,7 @@
                             </h2>
                             <div class="">
                             <div class="dates text-center mb-lg-4">
-                                <span class="lightwhite" style="color: #66fcf1 !important;">Date & Time (English)</span> 
+                                <span class="lightwhite" style="color: #66fcf1 !important;">Date & Time</span> 
                                 <h2 class="mb-4" style="color: #66fcf1 !important;">Mar 31, 2025 8:00 PM</h2>
                             </div>
                             
@@ -1678,7 +1663,7 @@
                                 </ul>
                             </div>
 
-                            <a href="#" class="geturl" target="_blank" 
+                            <a href="https://pages.razorpay.com/bootcamp2197" class="geturl" target="_blank" 
                                style="background: transparent; color: #fff; padding: 16px 32px; border-radius: 10px; display: inline-block; font-weight: 700; border: 2px solid #66fcf1; transition: all 0.3s ease;"
                                onmouseover="this.style.background='#66fcf1'; this.style.color='#000'; this.style.boxShadow='0 0 20px rgba(102, 252, 241, 0.4)'"
                                onmouseout="this.style.background='transparent'; this.style.color='#fff'; this.style.boxShadow='none'">
@@ -1691,7 +1676,7 @@
                         </div> 
                     </div>
                 </div>
-                <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000">
+                <!-- <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000">
                   <div class="upcom_main position-relative text-center">
                       <div class="upcom_box webinar_box">
                           <div class="d-flex flex-column h-100 justify-content-between">
@@ -1729,7 +1714,7 @@
                           </div>
                       </div>
                   </div>
-              </div>
+              </div> -->
             </div>
           </div>
       </section>
@@ -1913,7 +1898,7 @@
                 <div class="video-container player-container position-relative" 
                      style="border-radius: 20px; overflow: hidden; box-shadow: 0 0 20px rgba(102, 252, 241, 0.2);">
                   <video width="100%" height="auto" autoplay muted loop playsinline>
-                    <source src="assets/videos/havenark_video_1.mp4" type="video/mp4">
+                    <source src="assets/videos/akrt.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
                 </div>
@@ -2138,13 +2123,13 @@
             >
               <div class="check-btn-m mb-3">
                 <a
-                  href="https://wa.link/zga4xa"
+                  href="https://pages.razorpay.com/bootcamp2197"
                   class="green_btn btn-animation px-5 geturl"
                   target="_blank"
                   style="background: transparent; color: #fff; border: 2px solid #66FCF1; padding: clamp(10px, 2vw, 12px) clamp(20px, 4vw, 30px); border-radius: 8px; font-weight: bold; transition: all 0.3s ease; display: inline-block; margin: 10px auto; text-decoration: none;"
                   onmouseover="this.style.background='#66FCF1'; this.style.color='#000'; this.style.boxShadow='0 0 20px rgba(102, 252, 241, 0.4)'; this.style.transform='translateY(-2px)';"
                   onmouseout="this.style.background='transparent'; this.style.color='#fff'; this.style.boxShadow='none'; this.style.transform='translateY(0)';"
-                  >Sign Up For English</a
+                  >Sign Up For Webinar</a
                 >
               </div>
               <p class="font-14 mb-2" style="color: #66FCF1; animation: blink 1.5s infinite; font-size: clamp(0.8rem, 2vw, 0.9rem);">
@@ -2402,8 +2387,8 @@
             </p>
             <p style="color: #45A29E; font-size: 0.8rem;">
               Not affiliated with Meta™ Inc. For informational purposes only. 
-              <a href="#" style="color: #66FCF1; text-decoration: none;">Privacy Policy</a> • 
-              <a href="#" style="color: #66FCF1; text-decoration: none;">Terms of Service</a>
+              <a href="https://www.havenark.in/policies" style="color: #66FCF1; text-decoration: none;">Privacy Policy</a> • 
+              <a href="https://www.havenark.in/policies" style="color: #66FCF1; text-decoration: none;">Terms of Service</a>
             </p>
           </div>
         </div>
