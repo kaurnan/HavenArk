@@ -2,7 +2,7 @@
 
     // Countdown timer
     var countdownElement = document.getElementById('countdown');
-    var countdownTime = 5 * 60 * 60 ; // Initial countdown time in seconds
+    var countdownTime = 5 * 60 * 60; // Initial countdown time in seconds
 
     function updateCountdown() {
         var hours = Math.floor(countdownTime / 3600);
@@ -15,10 +15,9 @@
         // Decrease the countdown time by 1 second
         countdownTime--;
 
-        // If countdown reaches zero, stop the countdown
+        // If countdown reaches zero, reset and restart
         if (countdownTime < 0) {
-            clearInterval(countdownInterval);
-            countdownElement.textContent = "00 : 00 : 00";
+            countdownTime = 5 * 60 * 60; // Reset to initial time
         }
     }
 
@@ -46,10 +45,9 @@
         // Decrease the countdown time by 1 second
         countdownAdd--;
 
-        // If countdown reaches zero, stop the countdown
+        // If countdown reaches zero, reset and restart
         if (countdownAdd < 0) {
-            clearInterval(countdownInterval);
-            countdownsBox.textContent = "00:00";
+            countdownAdd = 5 * 60; // Reset to initial time
         }
     }
 
@@ -79,12 +77,11 @@ function updateCountdowns() {
     // Decrease the countdown time by 1 second
     countdownTimes--;
 
-    // If countdown reaches zero, stop the countdown and show the message
+    // If countdown reaches zero, reset and restart
     if (countdownTimes < 0) {
-        clearInterval(countdownInterval);
-        countdownsElement.textContent = "00 : 00";
-        messageDiv.style.display = 'block'; // Show the message div
-        timetickWrapDiv.style.display = 'none'; // Hide the timetick_wrap div
+        countdownTimes = 5 * 60; // Reset to initial time
+        messageDiv.style.display = 'none'; // Hide message
+        timetickWrapDiv.style.display = 'block'; // Show timer
     }
 }
 
