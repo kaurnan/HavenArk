@@ -1374,7 +1374,7 @@
         <a href="partners.html" class="d-inline-block outline-button btn-animation mb-2 geturl" style="padding: 16px 15px; border-radius: 10px;">Checkout Our Partners</a>
       </div> -->
       <!--start-->
-      <section class="check_out_monster">
+      <section class="check_out_monster"> 
         <div class="container">
             <div class="head_wrap position-relative mb-lg-5 mb-4" data-aos="fade-up" data-aos-duration="1000">
                 <div class="heading_dv text-center">
@@ -1436,6 +1436,7 @@
                     overflow: hidden;
                     transition: transform 0.3s ease;
                     background: rgba(102, 252, 241, 0.1);
+                    display: flex; /* Added to make image fill container */
                 }
 
                 .slide:hover {
@@ -1445,8 +1446,9 @@
 
                 .slide img {
                     width: 100%;
-                    height: auto;
+                    height: 100%; /* Changed from auto to 100% */
                     display: block;
+                    object-fit: cover; /* Added to maintain aspect ratio while filling */
                 }
 
                 .slider-nav {
@@ -1852,8 +1854,15 @@
         
         /* Additional media query for iPhone Plus/Pro Max models */
         @media only screen and (min-width: 414px) and (max-width: 430px) and (min-device-height: 736px) {
+            .col-6 {
+                  width: 100% !important; /* Make cards full width (1 column) */
+              }
             .card {
-                height: 350px !important; /* Slightly taller for larger iPhones */
+                height: 600px !important; 
+                max-width: 100%;
+            }
+            .card-img-top {
+                object-fit: cover;
             }
         }
         
@@ -1866,7 +1875,7 @@
                 }
                 
                 .card {
-                    height: 300px !important;
+                    height: 650px !important;
                 }
             }
         }

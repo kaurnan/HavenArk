@@ -169,7 +169,7 @@ a.online-icon img { width: 90%; position: relative; top: 5px }
 .upcoming_webinar { position: relative }
 .slider-block {padding: 70px 0 0px;overflow: hidden;} 
 .slick-slide img { margin: 0 auto }
-.check_out_monster{ padding-bottom:100px;position: relative;}
+.check_out_monster{ padding-bottom:0px;position: relative;}
 .check_out_monster:after {
     content: '';
     position: absolute;
