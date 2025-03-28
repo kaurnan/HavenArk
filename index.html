@@ -1823,17 +1823,54 @@
             }
         }
 
-        @media (max-width: 576px) {
+        /* iPhone specific styles */
+        @media only screen and (max-width: 428px) and (min-device-width: 320px) {
+            .col-6 {
+                width: 100% !important; /* Make cards full width (1 column) */
+            }
+            
             .card {
+                height: 600px !important; /* Reduce height to make cards more square */
+                margin-bottom: 15px;
                 max-width: 100%;
             }
             
+            .card-img-container {
+                height: 100%;
+                padding: 10px;
+            }
+            
             .img-wrapper {
+                height: 100%;
                 padding: 3px;
+            }
+            
+            .card-img-top {
+                object-fit: cover;
+            }
+        }
+        
+        /* Additional media query for iPhone Plus/Pro Max models */
+        @media only screen and (min-width: 414px) and (max-width: 430px) and (min-device-height: 736px) {
+            .card {
+                height: 350px !important; /* Slightly taller for larger iPhones */
+            }
+        }
+        
+        /* Ensure Safari on iOS renders correctly */
+        @supports (-webkit-touch-callout: none) {
+            /* CSS specific to iOS devices */
+            @media only screen and (max-width: 430px) {
+                .col-6 {
+                    width: 100% !important;
+                }
+                
+                .card {
+                    height: 300px !important;
+                }
             }
         }
       </style>
-
           
 
       <script>
